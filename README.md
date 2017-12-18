@@ -32,11 +32,13 @@ include ':app', ':andrutil'
 project(':andrutil').projectDir = new File(settingsDir, 'andrutil/util')
 project(':andrutil').buildFileName = 'build.gradle'
 ```
+* 使用`subtree`提交子项目代码
+[参考文章](https://segmentfault.com/a/1190000003969060)
 
-
-# 参考
-[jingle1267/android-utils](https://github.com/jingle1267/android-utils)
-[solary2014/Open-Source-Android](https://github.com/solary2014/Open-Source-Android)
+# 参考与引用项目
+[jingle1267/android-utils](https://github.com/jingle1267/android-utils)  
+[solary2014/Open-Source-Android](https://github.com/solary2014/Open-Source-Android)  
+感谢以上作者提供的代码。
 
 # 作者联系方式
 邮箱：KigKrazy@163.com  
