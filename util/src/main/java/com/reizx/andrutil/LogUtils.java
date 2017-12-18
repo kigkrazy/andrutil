@@ -24,6 +24,7 @@ import android.util.Log;
  * @description And you can turn off the log by set DEBUG_LEVEL = Log.ASSERT.
  */
 public final class LogUtils {
+    public static String GTAG = ""; //global tag
 
     /**
      * Don't let anyone instantiate this class.
@@ -50,7 +51,7 @@ public final class LogUtils {
      */
     public static void v(Object obj) {
         if (Log.VERBOSE > DEBUG_LEVEL) {
-            String tag = getClassName();
+            String tag = GTAG + getClassName();
             String msg = obj != null ? obj.toString() : "obj == null";
             Log.v(tag, msg);
         }
@@ -63,7 +64,7 @@ public final class LogUtils {
      */
     public static void d(Object obj) {
         if (Log.DEBUG > DEBUG_LEVEL) {
-            String tag = getClassName();
+            String tag = GTAG + getClassName();
             String msg = obj != null ? obj.toString() : "obj == null";
             Log.d(tag, msg);
         }
@@ -76,7 +77,7 @@ public final class LogUtils {
      */
     public static void i(Object obj) {
         if (Log.INFO > DEBUG_LEVEL) {
-            String tag = getClassName();
+            String tag = GTAG + "/" + getClassName();
             String msg = obj != null ? obj.toString() : "obj == null";
             Log.i(tag, msg);
         }
@@ -89,7 +90,7 @@ public final class LogUtils {
      */
     public static void w(Object obj) {
         if (Log.WARN > DEBUG_LEVEL) {
-            String tag = getClassName();
+            String tag = GTAG + getClassName();
             String msg = obj != null ? obj.toString() : "obj == null";
             Log.w(tag, msg);
         }
@@ -102,7 +103,7 @@ public final class LogUtils {
      */
     public static void e(Object obj) {
         if (Log.ERROR > DEBUG_LEVEL) {
-            String tag = getClassName();
+            String tag = GTAG + getClassName();
             String msg = obj != null ? obj.toString() : "obj == null";
             Log.e(tag, msg);
         }
@@ -119,7 +120,7 @@ public final class LogUtils {
      */
     public static void wtf(Object obj) {
         if (Log.ASSERT > DEBUG_LEVEL) {
-            String tag = getClassName();
+            String tag = GTAG + getClassName();
             String msg = obj != null ? obj.toString() : "obj == null";
             Log.wtf(tag, msg);
         }
@@ -212,7 +213,7 @@ public final class LogUtils {
      */
     public static void print() {
         if (Log.VERBOSE > DEBUG_LEVEL) {
-            String tag = getClassName();
+            String tag = GTAG + getClassName();
             String method = callMethodAndLine();
             Log.v(tag, method);
             if (DEBUG_SYSOUT) {
@@ -228,7 +229,7 @@ public final class LogUtils {
      */
     public static void print(Object object) {
         if (Log.DEBUG > DEBUG_LEVEL) {
-            String tag = getClassName();
+            String tag = GTAG + getClassName();
             String method = callMethodAndLine();
             String content = "";
             if (object != null) {
@@ -251,7 +252,7 @@ public final class LogUtils {
      */
     public static void printError(Object object) {
         if (Log.ERROR > DEBUG_LEVEL) {
-            String tag = getClassName();
+            String tag = GTAG + getClassName();
             String method = callMethodAndLine();
             String content = "";
             if (object != null) {
@@ -274,7 +275,7 @@ public final class LogUtils {
      */
     public static void printCallHierarchy() {
         if (Log.VERBOSE > DEBUG_LEVEL) {
-            String tag = getClassName();
+            String tag = GTAG + getClassName();
             String method = callMethodAndLine();
             String hierarchy = getCallHierarchy();
             Log.v(tag, method + hierarchy);
@@ -340,4 +341,11 @@ public final class LogUtils {
         return result;
     }
 
+    public static String getGTAG() {
+        return GTAG;
+    }
+
+    public static void setGTAG(String GTAG) {
+        LogUtils.GTAG = GTAG;
+    }
 }
