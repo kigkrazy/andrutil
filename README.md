@@ -10,6 +10,12 @@
 |[ShellUtils][3]|安卓中Shell执行类|
 |[StringUtils][4]|安卓中Shell执行类|
 
+
+# 其他常用工具库
+| 库 | 介绍 | 
+|:-----:|:-----:|
+|[joor][101]|非常实用简洁的JAVA反射调用类|
+
 # 使用
 ## 源码编译
 
@@ -22,3 +28,6 @@
 [2]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/LogUtils.java
 [3]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/ShellUtils.java
 [4]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/StringUtils.java
+
+
+[101]: https://github.com/jOOQ/jOOR
