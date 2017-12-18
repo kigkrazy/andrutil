@@ -6,10 +6,9 @@
 | 类 | 介绍 | 
 |:-----:|:-----:|
 |["litesuits/android-common"][5]|直接引用该库的全部类，稍后整理|
-|[GsonUtils][1]|对象字符串互转类|
-|[LogUtils][2]|日志打印类|
-|[ShellUtils][3]|安卓中Shell执行类|
-|[StringUtils][4]|一些常用的字符串操作类|
+|[GsonUtil][1]|对象字符串互转类|
+|[LogUtil][2]|日志打印类|
+|[StringUtil][4]|一些常用的字符串操作类|
 
 
 
@@ -52,7 +51,6 @@ QQ：358778849
 
 [1]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/GsonUtils.java
 [2]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/LogUtils.java
-[3]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/ShellUtils.java
 [4]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/StringUtils.java
 [5]: https://github.com/kigkrazy/andrutil/blob/master/doc/README.md
 
