@@ -18,13 +18,29 @@
 
 # 使用
 ## 源码编译
+* 进入项目文件夹
+```
+git subtree add --prefix=andrutil https://github.com/kigkrazy/andrutil.git master
+```
+* 修改`settings.gradle`
+```
+//settings.gradle
+//增加':andrutil'模块
+include ':app', ':andrutil'
+
+//为xdao指定路径
+project(':andrutil').projectDir = new File(settingsDir, 'andrutil/util')
+project(':andrutil').buildFileName = 'build.gradle'
+```
 
 
 # 参考
 [jingle1267/android-utils](https://github.com/jingle1267/android-utils)
 [solary2014/Open-Source-Android](https://github.com/solary2014/Open-Source-Android)
 
-
+# 作者联系方式
+邮箱：KigKrazy@163.com  
+QQ：358778849
 
 [1]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/GsonUtils.java
 [2]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/LogUtils.java
