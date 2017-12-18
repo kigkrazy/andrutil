@@ -14,7 +14,7 @@
 # 其他常用工具库
 | 库 | 介绍 | 
 |:-----:|:-----:|
-|[joor][101]|非常实用简洁的JAVA反射调用类[参考][102]|
+|[joor][101]|非常实用简洁的JAVA反射调用类[【参考】][102]|
 
 # 使用
 ## 源码编译
@@ -22,6 +22,8 @@
 
 # 参考
 [jingle1267/android-utils](https://github.com/jingle1267/android-utils)
+[solary2014/Open-Source-Android](https://github.com/solary2014/Open-Source-Android)
+
 
 
 [1]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/GsonUtils.java
