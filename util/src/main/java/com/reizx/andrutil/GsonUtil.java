@@ -13,7 +13,7 @@ import java.lang.reflect.Type;
  * Created by Kigkrazy on 2017/6/11.
  */
 
-public final class GsonUtils {
+public final class GsonUtil {
 
     private static final Gson gson = new Gson();
 
@@ -22,7 +22,7 @@ public final class GsonUtils {
     /**
      * Just making default constructor private for noninstantiability.
      */
-    private GsonUtils() {
+    private GsonUtil() {
         throw new AssertionError();
     }
 

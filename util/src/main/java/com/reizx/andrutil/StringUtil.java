@@ -24,12 +24,12 @@ import java.util.Locale;
  *
  * @author jingle1267@163.com
  */
-public final class StringUtils {
+public final class StringUtil {
 
     /**
      * Don't let anyone instantiate this class.
      */
-    private StringUtils() {
+    private StringUtil() {
         throw new Error("Do not need instantiate!");
     }
 

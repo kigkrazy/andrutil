@@ -23,13 +23,13 @@ import android.util.Log;
  * @author jingle1267@163.com
  * @description And you can turn off the log by set DEBUG_LEVEL = Log.ASSERT.
  */
-public final class LogUtils {
+public final class LogUtil {
     public static String GTAG = ""; //global tag
 
     /**
      * Don't let anyone instantiate this class.
      */
-    private LogUtils() {
+    private LogUtil() {
         throw new Error("Do not need instantiate!");
     }
 
@@ -346,6 +346,6 @@ public final class LogUtils {
     }
 
     public static void setGTAG(String GTAG) {
-        LogUtils.GTAG = GTAG;
+        LogUtil.GTAG = GTAG;
     }
 }
