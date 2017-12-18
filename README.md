@@ -14,7 +14,7 @@
 # 其他常用工具库
 | 库 | 介绍 | 
 |:-----:|:-----:|
-|[joor][101]|非常实用简洁的JAVA反射调用类|
+|[joor][101]|非常实用简洁的JAVA反射调用类[参考][102]|
 
 # 使用
 ## 源码编译
@@ -31,3 +31,4 @@
 
 
 [101]: https://github.com/jOOQ/jOOR
+[102]: https://github.com/hl85/openq-blog/blob/75e5a267323e5c84188b2a3199799dab995d43de/posts/joor-source-code-analysis.md
