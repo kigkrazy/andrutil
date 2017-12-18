@@ -90,7 +90,8 @@ public class NotificationUtil {
             notification.ledOnMS = 5000; //闪光时间，毫秒
 
             notification.tickerText = ticker;
-            notification.setLatestEventInfo(context, title, msg, pendingIntent);
+            //todo 目前此处在SDK高于23的版本无法编译通过此处暂时留坑。
+            //notification.setLatestEventInfo(context, title, msg, pendingIntent);//高于
             // 把Notification传递给NotificationManager
             notificationManager.notify(id, notification);
         }
