@@ -111,7 +111,7 @@ public class SilentInstaller {
     /**
      * Installation return code<br/>
      * the new package failed because it has specified that it is a test-only package and the caller has not supplied
-     * the {@link #INSTALL_ALLOW_TEST} flag.
+     * the {@link #INSTALL_FAILED_TEST_ONLY} flag.
      */
     public static final int INSTALL_FAILED_TEST_ONLY = -15;
 
