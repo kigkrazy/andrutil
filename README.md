@@ -9,6 +9,7 @@
 |[GsonUtil][1]|对象字符串互转类|
 |[LogUtil][2]|日志打印类|
 |[StringUtil][4]|一些常用的字符串操作类|
+|[AssetsUtil][6]|assets资源操作|
 
 
 
@@ -59,6 +60,7 @@ QQ：358778849
 [2]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/LogUtils.java
 [4]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/StringUtils.java
 [5]: https://github.com/kigkrazy/andrutil/blob/master/doc/README.md
+[5]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/AssetsUtil.java
 
 [1001]: https://github.com/jOOQ/jOOR
 [1002]: https://github.com/hl85/openq-blog/blob/75e5a267323e5c84188b2a3199799dab995d43de/posts/joor-source-code-analysis.md
