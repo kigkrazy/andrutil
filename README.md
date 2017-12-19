@@ -18,6 +18,7 @@
 |:-----:|:-----:|
 |[joor][1001]|非常实用简洁的JAVA反射调用类[【参考】][1002]|
 |[android-common][1003]|一个轻量级的安卓工具包，包含各种加密解密，以及常用字符串文件夹处理类|
+|[AndroidUtilCode][1004]|一个比较完整的安卓通用代码库[【说明】][1005]|
 
 # 使用
 ## 源码编译
@@ -57,4 +58,6 @@ QQ：358778849
 [1001]: https://github.com/jOOQ/jOOR
 [1002]: https://github.com/hl85/openq-blog/blob/75e5a267323e5c84188b2a3199799dab995d43de/posts/joor-source-code-analysis.md
 [1003]: https://github.com/litesuits/android-common
+[1004]: https://github.com/Blankj/AndroidUtilCode
+[1005]: https://github.com/Blankj/AndroidUtilCode/blob/master/utilcode/README-CN.md
 
