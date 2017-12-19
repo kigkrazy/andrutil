@@ -37,6 +37,11 @@ include ':app', ':andrutil'
 project(':andrutil').projectDir = new File(settingsDir, 'andrutil/util')
 project(':andrutil').buildFileName = 'build.gradle'
 ```
+
+* 在项目中更新`andrutil`代码
+```
+git subtree pull --prefix=andrutil https://github.com/kigkrazy/andrutil.git master
+```
 * 使用`subtree`提交子项目代码
 [参考文章](https://segmentfault.com/a/1190000003969060)
 
