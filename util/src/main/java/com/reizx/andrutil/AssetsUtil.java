@@ -17,7 +17,7 @@ import java.io.InputStreamReader;
 
 public class AssetsUtil {
     /**
-     * 读access中文件的内容
+     * 读access中文件的内容到字符串
      * @param context
      * @param name
      * @return
@@ -34,13 +34,30 @@ public class AssetsUtil {
     }
 
     /**
+     * 读access中文件的内容到byte[]数组
+     * @param context
+     * @param name
+     * @return
+     */
+    public static byte[] readFile2ByteArray(Context context, String name) {
+        byte[] ret = null;
+        try {
+            InputStream in = context.getResources().getAssets().open(name);
+            ret = IOUtils.toByteArray(in);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return ret;
+    }
+
+    /**
      * 将asset中的文件复制到指定位置
      * @param context
      * @param name assets文件名
      * @param path 目标文件路径
      * @return 写入文件成功返回true，否则返回false
      */
-    public static boolean copy2File(Context context, String name, String path) {
+    public static boolean read2File(Context context, String name, String path) {
         boolean ret = false;
         try {
             InputStream in = context.getResources().getAssets().open(name);
@@ -52,4 +69,33 @@ public class AssetsUtil {
         }
         return ret;
     }
+
+    /**
+     * 将asset中的文件复制到指定位置
+     * @param context
+     * @param name
+     * @param path
+     * @return
+     */
+    public static boolean copy2File(Context context, String name, String path) {
+        return read2File(context, name, path);
+    }
+
+
+    /**
+     * 打开assets中的文件
+     * @param context
+     * @param name
+     * @return
+     */
+    public static InputStream openAssetsFile(Context context, String name) {
+        InputStream ret = null;
+        try {
+            ret = context.getResources().getAssets().open(name);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return ret;
+    }
+
 }
