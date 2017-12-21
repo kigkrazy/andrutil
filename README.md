@@ -52,7 +52,7 @@ git subtree pull --prefix=andrutil https://github.com/kigkrazy/andrutil.git mast
 repositories {  
     jcenter()  
     maven { 
-        url "https://github.com/kigkrazy/reizx-repo/blob/master" 
+        url "https://raw.githubusercontent.com/kigkrazy/reizx-repo/master" 
     }  
 }  
 ```
