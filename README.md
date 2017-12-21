@@ -43,9 +43,30 @@ project(':andrutil').buildFileName = 'build.gradle'
 ```
 git subtree pull --prefix=andrutil https://github.com/kigkrazy/andrutil.git master
 ```
+
 * 使用`subtree`提交子项目代码
 [参考文章](https://segmentfault.com/a/1190000003969060)
+## maven仓库引用
+添加远程仓库
+```
+repositories {  
+    jcenter()  
+    maven { 
+        url "https://github.com/kigkrazy/reizx-repo/blob/master" 
+    }  
+}  
+```
+添加引用
+```
+compile 'com.reizx:andrutil:1.0'
+```
+**由于目前还处于开发阶段，还未发布到jcenter仓库**
 
+# 项目打包
+```
+gradlew uploadArchives
+```
+执行上面命令会在项目根目录生成`pubrepo`文件夹，并且生成打包好的JAR包，即可以发布的到MAVEN仓库的相关文件。
 # 参考与引用项目
 [jingle1267/android-utils](https://github.com/jingle1267/android-utils)  
 [solary2014/Open-Source-Android](https://github.com/solary2014/Open-Source-Android)  

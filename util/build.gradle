@@ -35,3 +35,25 @@ dependencies {
     // https://mvnrepository.com/artifact/com.google.code.gson/gson
     compile 'com.google.code.gson:gson:2.8.1'
 }
+
+apply plugin: 'maven'
+
+// ext is a gradle closure allowing the declaration of global properties
+ext {
+    PUBLISH_GROUP_ID = 'com.reizx'
+    PUBLISH_ARTIFACT_ID = 'andrutil'
+    PUBLISH_VERSION = android.defaultConfig.versionName
+}
+
+uploadArchives {
+    println "${rootDir}\\pubrepo"
+    repositories.mavenDeployer {
+        def deployPath = file("${rootDir}\\pubrepo")
+        repository(url: "file://${deployPath.absolutePath}")
+        pom.project {
+            groupId project.PUBLISH_GROUP_ID
+            artifactId project.PUBLISH_ARTIFACT_ID
+            version project.PUBLISH_VERSION
+        }
+    }
+}
