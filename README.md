@@ -66,6 +66,11 @@ compile 'com.reizx:andrutil:1.0'
 ```
 gradlew uploadArchives
 ```
+# 一些个人常用信息收集
+[安卓开发规范](https://github.com/Blankj/AndroidStandardDevelop#5-%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6%E8%A7%84%E8%8C%83)
+[Android 流行框架查速表](https://www.ctolib.com/cheatsheets-Android-ch.html)
+
+
 执行上面命令会在项目根目录生成`pubrepo`文件夹，并且生成打包好的JAR包，即可以发布的到MAVEN仓库的相关文件。
 # 参考与引用项目
 [jingle1267/android-utils](https://github.com/jingle1267/android-utils)  
@@ -81,7 +86,7 @@ QQ：358778849
 [2]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/LogUtils.java
 [4]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/StringUtils.java
 [5]: https://github.com/kigkrazy/andrutil/blob/master/doc/README.md
-[5]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/AssetsUtil.java
+[6]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/AssetsUtil.java
 
 [1001]: https://github.com/jOOQ/jOOR
 [1002]: https://github.com/hl85/openq-blog/blob/75e5a267323e5c84188b2a3199799dab995d43de/posts/joor-source-code-analysis.md
