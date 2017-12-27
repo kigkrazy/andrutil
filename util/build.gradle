@@ -9,7 +9,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
-        versionName "1.0"
+        versionName "1.1"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -22,6 +22,21 @@ android {
         }
     }
 
+    /**
+     * 在Android.mk中设置APP_ABI是没有效果的需要在添加如下模块，用来设置ABI
+     */
+    defaultConfig{
+        ndk {
+            // Specifies the ABI configurations of your native
+            // libraries Gradle should build and package with your APK.
+            // abiFilters 'armeabi', 'armeabi-v7a', 'x86' //去掉平台过滤，支持全平台
+        }
+    }
+    externalNativeBuild {
+        ndkBuild {
+            path file(".\\src\\main\\jni\\Android.mk")
+        }
+    }
 }
 
 dependencies {
