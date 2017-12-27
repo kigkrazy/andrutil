@@ -336,7 +336,7 @@ static int register_FileDescriptor(JNIEnv *env)
 }
 
 
-static const char *classPathName = "com/reizx/andrutil";
+static const char *classPathName = "com/reizx/andrutil/Exec";
 
 static JNINativeMethod method_table[] = {
     { "createSubprocess", "(ILjava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[I)Ljava/io/FileDescriptor;",
