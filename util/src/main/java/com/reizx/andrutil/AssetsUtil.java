@@ -2,8 +2,8 @@ package com.reizx.andrutil;
 
 import android.content.Context;
 
-import com.litesuits.common.io.FileUtils;
-import com.litesuits.common.io.IOUtils;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
 
 import java.io.File;
 import java.io.IOException;

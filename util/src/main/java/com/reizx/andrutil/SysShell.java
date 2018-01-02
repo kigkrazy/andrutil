@@ -2,7 +2,7 @@ package com.reizx.andrutil;
 
 import android.os.Build;
 
-import com.litesuits.common.utils.ShellUtil;
+import com.blankj.utilcode.util.ShellUtils;
 
 /**
  * 一些系统命令
@@ -18,7 +18,7 @@ public class SysShell {
     public static void RequestPermission(String pkgName, String perm){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             //命令行请求授权
-            ShellUtil.execCommand("pm grant " + pkgName + " " + perm, true);
+            ShellUtils.execCmd("pm grant " + pkgName + " " + perm, true);
         }
     }
 }
