@@ -5,7 +5,7 @@
 # 所有的工具类简介:
 | 类 | 介绍 | 
 |:-----:|:-----:|
-|["litesuits/android-common"][5]|直接引用该库的全部类，稍后整理|
+|[Blankj/AndroidUtilCode][7]|大量引用该类|
 |[GsonUtil][1]|对象字符串互转类|
 |[LogUtil][2]|日志打印类|
 |[StringUtil][4]|一些常用的字符串操作类|
@@ -87,6 +87,7 @@ QQ：358778849
 [4]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/StringUtils.java
 [5]: https://github.com/kigkrazy/andrutil/blob/master/doc/README.md
 [6]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/AssetsUtil.java
+[7]: https://github.com/Blankj/AndroidUtilCode
 
 [1001]: https://github.com/jOOQ/jOOR
 [1002]: https://github.com/hl85/openq-blog/blob/75e5a267323e5c84188b2a3199799dab995d43de/posts/joor-source-code-analysis.md
