@@ -23,18 +23,18 @@ android {
     /**
      * 在Android.mk中设置APP_ABI是没有效果的需要在添加如下模块，用来设置ABI
      */
-    defaultConfig{
-        ndk {
-            // Specifies the ABI configurations of your native
-            // libraries Gradle should build and package with your APK.
-            // abiFilters 'armeabi', 'armeabi-v7a', 'x86' //去掉平台过滤，支持全平台
-        }
-    }
-    externalNativeBuild {
-        ndkBuild {
-            path file(".\\src\\main\\jni\\Android.mk")
-        }
-    }
+//    defaultConfig{
+//        ndk {
+//            // Specifies the ABI configurations of your native
+//            // libraries Gradle should build and package with your APK.
+//            // abiFilters 'armeabi', 'armeabi-v7a', 'x86' //去掉平台过滤，支持全平台
+//        }
+//    }
+//    externalNativeBuild {
+//        ndkBuild {
+//            path file(".\\src\\main\\jni\\Android.mk")
+//        }
+//    }
 }
 
 dependencies {
@@ -44,8 +44,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-
-    // https://mvnrepository.com/artifact/com.google.code.gson/gson
 
     //====================================================
     //一些常用工具类
@@ -57,8 +55,8 @@ dependencies {
     //====================================================
     // rxjava2 && retrofit2  用于网络请求与响应式编程
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
-// Because RxAndroid releases are few and far between, it is recommended you also
-// explicitly depend on RxJava's latest version for bug fixes and new features.
+    // Because RxAndroid releases are few and far between, it is recommended you also
+    // explicitly depend on RxJava's latest version for bug fixes and new features.
     compile 'io.reactivex.rxjava2:rxjava:2.1.7'
     compile 'com.squareup.retrofit2:retrofit:2.3.0'
     compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'

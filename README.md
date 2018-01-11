@@ -11,15 +11,33 @@
 |[StringUtil][4]|一些常用的字符串操作类|
 |[AssetsUtil][6]|assets资源操作|
 
-
-
-
 # 其他常用工具库
 | 库 | 介绍 | 
 |:-----:|:-----:|
 |[joor][1001]|非常实用简洁的JAVA反射调用类[【参考】][1002]|
 |[android-common][1003]|一个轻量级的安卓工具包，包含各种加密解密，以及常用字符串文件夹处理类|
 |[AndroidUtilCode][1004]|一个比较完整的安卓通用代码库[【说明】][1005]|
+
+# 目前代码依赖以下常用库
+```
+    //====================================================
+    //一些常用工具类
+    // https://mvnrepository.com/artifact/commons-io/commons-io
+    compile group: 'commons-io', name: 'commons-io', version: '2.4'
+    compile 'com.blankj:utilcode:1.10.0'
+    compile 'com.google.code.gson:gson:2.8.1'
+
+    //====================================================
+    // rxjava2 && retrofit2  用于网络请求与响应式编程
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    // Because RxAndroid releases are few and far between, it is recommended you also
+    // explicitly depend on RxJava's latest version for bug fixes and new features.
+    compile 'io.reactivex.rxjava2:rxjava:2.1.7'
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    compile 'com.squareup.retrofit2:converter-scalars:2.3.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+```
 
 # 使用
 ## 源码编译
@@ -58,8 +76,10 @@ repositories {
 ```
 添加引用
 ```
-compile 'com.reizx:andrutil:1.0'
+compile 'com.reizx:andrutil:1.3'
 ```
+
+
 **由于目前还处于开发阶段，还未发布到jcenter仓库**
 
 # 项目打包
