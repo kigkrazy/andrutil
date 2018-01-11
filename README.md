@@ -2,6 +2,21 @@
 囊括了一大部分Android应用开发过程当中常用的工具类。工具类来源整理自网络和自己编写。  
 每个类都会在开头提供用例。
 
+# 使用
+1. 添加远程仓库
+```
+repositories {  
+    jcenter()  
+    maven { 
+        url "https://raw.githubusercontent.com/kigkrazy/reizx-repo/master" 
+    }  
+}  
+```
+2. 添加引用
+```
+compile 'com.reizx:andrutil:1.3'
+```
+
 # 所有的工具类简介:
 | 类 | 介绍 | 
 |:-----:|:-----:|
@@ -18,7 +33,7 @@
 |[android-common][1003]|一个轻量级的安卓工具包，包含各种加密解密，以及常用字符串文件夹处理类|
 |[AndroidUtilCode][1004]|一个比较完整的安卓通用代码库[【说明】][1005]|
 
-# 目前代码依赖以下常用库
+# 目前本库依赖以下常用库,
 ```
     //====================================================
     //一些常用工具类
@@ -38,56 +53,14 @@
     compile 'com.squareup.retrofit2:converter-scalars:2.3.0'
     compile 'com.squareup.retrofit2:converter-gson:2.2.0'
 ```
-
-# 使用
-## 源码编译
-* 进入项目文件夹
-```
-git subtree add --prefix=andrutil https://github.com/kigkrazy/andrutil.git master
-```
-
-* 修改`settings.gradle`
-```
-//settings.gradle
-//增加':andrutil'模块
-include ':app', ':andrutil'
-
-//为xdao指定路径
-project(':andrutil').projectDir = new File(settingsDir, 'andrutil/util')
-project(':andrutil').buildFileName = 'build.gradle'
-```
-
-* 在项目中更新`andrutil`代码
-```
-git subtree pull --prefix=andrutil https://github.com/kigkrazy/andrutil.git master
-```
-
-* 使用`subtree`提交子项目代码
-[参考文章](https://segmentfault.com/a/1190000003969060)
-## maven仓库引用
-添加远程仓库
-```
-repositories {  
-    jcenter()  
-    maven { 
-        url "https://raw.githubusercontent.com/kigkrazy/reizx-repo/master" 
-    }  
-}  
-```
-添加引用
-```
-compile 'com.reizx:andrutil:1.3'
-```
-
-
-**由于目前还处于开发阶段，还未发布到jcenter仓库**
+只需要引用一个我们的库，上面那些常用依赖库就会被全部引用。
 
 # 项目打包
 ```
 gradlew uploadArchives
 ```
 # 一些个人常用信息收集
-[安卓开发规范](https://github.com/Blankj/AndroidStandardDevelop#5-%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6%E8%A7%84%E8%8C%83)
+[安卓开发规范](https://github.com/Blankj/AndroidStandardDevelop#5-%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6%E8%A7%84%E8%8C%83)  
 [Android 流行框架查速表](https://www.ctolib.com/cheatsheets-Android-ch.html)
 
 
