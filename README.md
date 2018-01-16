@@ -14,7 +14,7 @@ repositories {
 ```
 2. 添加引用
 ```
-compile 'com.reizx:andrutil:1.4'
+compile 'com.reizx:andrutil:1.5'
 ```
 
 # 依赖的类库以及工具类:
@@ -22,6 +22,7 @@ compile 'com.reizx:andrutil:1.4'
 |:-----:|:-----:|
 |[Blankj/AndroidUtilCode][7]|大量引用该类|
 |[joor][1001]|非常实用简洁的JAVA反射调用类[【参考】][1002]|
+|[logger][8]|android优秀的日志类|
 |[GsonUtil][1]|对象字符串互转类|
 |[LogUtil][2]|日志打印类|
 |[StringUtil][4]|一些常用的字符串操作类|
@@ -54,7 +55,7 @@ compile 'com.reizx:andrutil:1.4'
     compile 'com.squareup.retrofit2:converter-gson:2.2.0'
     // https://mvnrepository.com/artifact/org.jooq/joor
     compile group: 'org.jooq', name: 'joor', version: '0.9.7'
-
+    compile 'com.orhanobut:logger:2.1.1'
 ```
 只需要引用一个我们的库，上面那些常用依赖库就会被全部引用。
 
@@ -84,6 +85,7 @@ QQ：358778849
 [5]: https://github.com/kigkrazy/andrutil/blob/master/doc/README.md
 [6]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/AssetsUtil.java
 [7]: https://github.com/Blankj/AndroidUtilCode
+[8]: https://github.com/orhanobut/logger
 
 [1001]: https://github.com/jOOQ/jOOR
 [1002]: https://github.com/hl85/openq-blog/blob/75e5a267323e5c84188b2a3199799dab995d43de/posts/joor-source-code-analysis.md
