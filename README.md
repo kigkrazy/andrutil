@@ -17,10 +17,11 @@ repositories {
 compile 'com.reizx:andrutil:1.3'
 ```
 
-# 所有的工具类简介:
+# 依赖的类库以及工具类:
 | 类 | 介绍 | 
 |:-----:|:-----:|
 |[Blankj/AndroidUtilCode][7]|大量引用该类|
+|[joor][1001]|非常实用简洁的JAVA反射调用类[【参考】][1002]|
 |[GsonUtil][1]|对象字符串互转类|
 |[LogUtil][2]|日志打印类|
 |[StringUtil][4]|一些常用的字符串操作类|
@@ -29,7 +30,6 @@ compile 'com.reizx:andrutil:1.3'
 # 其他常用工具库
 | 库 | 介绍 | 
 |:-----:|:-----:|
-|[joor][1001]|非常实用简洁的JAVA反射调用类[【参考】][1002]|
 |[android-common][1003]|一个轻量级的安卓工具包，包含各种加密解密，以及常用字符串文件夹处理类|
 |[AndroidUtilCode][1004]|一个比较完整的安卓通用代码库[【说明】][1005]|
 
@@ -52,6 +52,9 @@ compile 'com.reizx:andrutil:1.3'
     compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
     compile 'com.squareup.retrofit2:converter-scalars:2.3.0'
     compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    // https://mvnrepository.com/artifact/org.jooq/joor
+    compile group: 'org.jooq', name: 'joor', version: '0.9.7'
+
 ```
 只需要引用一个我们的库，上面那些常用依赖库就会被全部引用。
 
