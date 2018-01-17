@@ -76,7 +76,7 @@ ext {
     PUBLISH_VERSION = android.defaultConfig.versionName
 }
 
-packageAar {
+uploadArchives {
     println "${rootDir}\\pubrepo"
     repositories.mavenDeployer {
         def deployPath = file("${rootDir}\\..\\reizx-repo")
