@@ -1,11 +1,8 @@
 package com.reizx.andrutil;
 
-import com.litesuits.android.log.Log;
-import com.litesuits.common.utils.ShellUtil;
 
 import org.junit.Test;
 
-import java.io.IOException;
 
 /**
  * Created by kig on 2017/12/27.
@@ -17,8 +14,8 @@ public class SubProcessUtilTest {
 //        String cmd = "/system/bin/touch /data/local/tmp/andtest";
         String cmd = "/data/data/com.reizx.zues.proxy/proxy.sh start http 49.87.135.87 53128 false \"\" \"\" \"/data/data/com.reizx.zues.proxy\"";
         //boolean result = Utils.runRootCommand(cmd);
-        ShellUtil.execCommand(cmd, true, false);
-        Log.d("SubProcessUtilTest", "the result : " );
+//        ShellUtil.execCommand(cmd, true, false);
+//        Log.d("SubProcessUtilTest", "the result : " );
 
     }
 }
