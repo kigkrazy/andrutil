@@ -54,7 +54,7 @@ compile 'com.reizx:andrutil:1.5'
     compile 'com.squareup.retrofit2:converter-scalars:2.3.0'
     compile 'com.squareup.retrofit2:converter-gson:2.2.0'
     // https://mvnrepository.com/artifact/org.jooq/joor
-    compile group: 'org.jooq', name: 'joor', version: '0.9.7'
+    compile group: 'org.jooq', name: 'joor-java-6', version: '0.9.7'
     compile 'com.orhanobut:logger:2.1.1'
 ```
 只需要引用一个我们的库，上面那些常用依赖库就会被全部引用。
