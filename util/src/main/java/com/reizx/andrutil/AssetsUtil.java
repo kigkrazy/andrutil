@@ -8,7 +8,6 @@ import org.apache.commons.io.IOUtils;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 
 /**
  * Assets 读写工具类
@@ -98,4 +97,21 @@ public class AssetsUtil {
         return ret;
     }
 
+    /**
+     * check asset exists
+     * 检测文件是否存在
+     * @param context
+     * @param assetFilePath
+     * @return
+     */
+    public static boolean exists(final Context context, final String assetFilePath) {
+        boolean exist = false;
+        try {
+            InputStream stream = context.getAssets().open(assetFilePath);
+            stream.close();
+            exist = true;
+        } catch (Exception e) {
+        }
+        return exist;
+    }
 }
