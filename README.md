@@ -14,7 +14,7 @@ repositories {
 ```
 2. 添加引用
 ```
-compile 'com.reizx:andrutil:1.5'
+compile 'com.reizx:andrutil:1.6'
 ```
 
 # 依赖的类库以及工具类:
