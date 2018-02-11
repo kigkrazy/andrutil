@@ -4,15 +4,23 @@
 
 # 使用
 1. 添加远程仓库
+
+在项目根目录的`build.gradle`添加仓库
 ```
-repositories {  
-    jcenter()  
-    maven { 
-        url "https://raw.githubusercontent.com/kigkrazy/reizx-repo/master" 
-    }  
-}  
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        //add Maven Repository
+        maven {
+            url "https://raw.githubusercontent.com/kigkrazy/reizx-repo/master"
+        }
+    }
+} 
 ```
 2. 添加引用
+
+在需要引入的库添加如下引用
 ```
 compile 'com.reizx:andrutil:1.6'
 ```
