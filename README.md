@@ -48,7 +48,7 @@ compile 'com.reizx:andrutil:1.6'
     //一些常用工具类
     // https://mvnrepository.com/artifact/commons-io/commons-io
     compile group: 'commons-io', name: 'commons-io', version: '2.4'
-    compile 'com.blankj:utilcode:1.10.0'
+    compile 'com.blankj:utilcode:1.12.5'
     compile 'com.google.code.gson:gson:2.8.1'
 
     //====================================================
