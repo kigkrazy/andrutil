@@ -22,7 +22,7 @@ allprojects {
 
 在需要引入的库添加如下引用
 ```
-compile 'com.reizx:andrutil:1.6'
+compile 'com.reizx:andrutil:1.6.1'
 ```
 
 # 依赖的类库以及工具类:
