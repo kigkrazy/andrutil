@@ -7,7 +7,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
-        versionName "1.7.0"
+        versionName "1.7.1"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -62,8 +62,9 @@ dependencies {
     compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
     compile 'com.squareup.retrofit2:converter-scalars:2.3.0'
     compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+    // 官方修复了android平台下的bug此处恢复依赖，原有不动
     // https://mvnrepository.com/artifact/org.jooq/joor
-    //compile group: 'org.jooq', name: 'joor-java-8', version: '0.9.7'
+    compile group: 'org.jooq', name: 'joor-java-6', version: '0.9.8'
     compile 'com.orhanobut:logger:2.1.1'
 }
 
