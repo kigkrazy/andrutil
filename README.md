@@ -35,6 +35,7 @@ compile 'com.reizx:andrutil:1.7.1'
 |[LogUtil][2]|日志打印类|
 |[StringUtil][4]|一些常用的字符串操作类|
 |[AssetsUtil][6]|assets资源操作|
+|[HttpUrlUtil][9]|HttpUrl的解析|
 
 # 其他常用工具库
 | 库 | 介绍 | 
@@ -95,6 +96,7 @@ QQ：358778849
 [6]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/AssetsUtil.java
 [7]: https://github.com/Blankj/AndroidUtilCode
 [8]: https://github.com/orhanobut/logger
+[9]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/HttpUrlUtil.java
 
 [1001]: https://github.com/jOOQ/jOOR
 [1002]: https://github.com/hl85/openq-blog/blob/75e5a267323e5c84188b2a3199799dab995d43de/posts/joor-source-code-analysis.md
