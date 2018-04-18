@@ -49,6 +49,9 @@ dependencies {
     //一些常用工具类
     // https://mvnrepository.com/artifact/commons-io/commons-io
     compile group: 'commons-io', name: 'commons-io', version: '2.4'
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
+
     compile 'com.blankj:utilcode:1.12.5'
     compile 'com.google.code.gson:gson:2.8.1'
 

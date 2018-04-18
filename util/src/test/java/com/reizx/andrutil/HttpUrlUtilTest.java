@@ -6,6 +6,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
+ * HttpUrlUtil的单元测试用例
  * Created by kig on 2018/4/18.
  */
 
@@ -15,15 +16,10 @@ public class HttpUrlUtilTest {
 
     @Test
     public void RegexTest() {
-        Matcher matcher = HTTP_PATTERN.matcher(TEST_URL);
-
-        if (matcher.matches()){
-            System.out.printf("matches...");
-            System.out.printf("the host : " + matcher.group(2) + "\n");
-            System.out.printf("the path : " + matcher.group(3) + "\n");
-            System.out.printf("the param : " + matcher.group(4) + "\n");
-            return;
-        }
-        System.out.printf("no matches...");
+        System.out.printf("matches...");
+        System.out.printf("the host : " + HttpUrlUtil.getHost(TEST_URL) + "\n");
+        System.out.printf("the path : " +  HttpUrlUtil.getPath(TEST_URL) + "\n");
+        System.out.printf("the param : " +  HttpUrlUtil.getParamString(TEST_URL) + "\n");
+        System.out.printf("the param maps : " +  HttpUrlUtil.getParamMaps(TEST_URL) + "\n");
     }
 }
