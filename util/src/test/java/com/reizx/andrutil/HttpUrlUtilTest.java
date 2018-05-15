@@ -20,6 +20,5 @@ public class HttpUrlUtilTest {
         System.out.printf("the host : " + HttpUrlUtil.getHost(TEST_URL) + "\n");
         System.out.printf("the path : " +  HttpUrlUtil.getPath(TEST_URL) + "\n");
         System.out.printf("the param : " +  HttpUrlUtil.getParamString(TEST_URL) + "\n");
-        System.out.printf("the param maps : " +  HttpUrlUtil.getParamMaps(TEST_URL) + "\n");
     }
 }
