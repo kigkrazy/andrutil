@@ -65,6 +65,7 @@ dependencies {
     compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
     compile 'com.squareup.retrofit2:converter-scalars:2.3.0'
     compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+    api 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
     // 官方修复了android平台下的bug此处恢复依赖，原有不动
     // https://mvnrepository.com/artifact/org.jooq/joor
     compile group: 'org.jooq', name: 'joor-java-6', version: '0.9.8'
