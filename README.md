@@ -22,7 +22,12 @@ allprojects {
 
 在需要引入的库添加如下引用
 ```
-compile 'com.reizx:andrutil:1.7.3'
+compile 'com.reizx:andrutil:1.7.3' {
+    //todo 此处可以排除不想依赖的包
+    //例如：
+    //  exclude group: 'com.android.support'
+    //  exclude module: 'common-io'
+}
 ```
 
 # 依赖的类库以及工具类:
@@ -36,6 +41,7 @@ compile 'com.reizx:andrutil:1.7.3'
 |[StringUtil][4]|一些常用的字符串操作类|
 |[AssetsUtil][6]|assets资源操作|
 |[HttpUrlUtil][9]|HttpUrl的解析|
+|[AndroidProcesses][10]|一个获取当前系统所有进程的库（仅支持5.x以上）|
 
 # 其他常用工具库
 | 库 | 介绍 | 
@@ -48,28 +54,36 @@ compile 'com.reizx:andrutil:1.7.3'
     //====================================================
     //一些常用工具类
     // https://mvnrepository.com/artifact/commons-io/commons-io
-    compile group: 'commons-io', name: 'commons-io', version: '2.4'
-    compile 'com.blankj:utilcode:1.12.5'
-    compile 'com.google.code.gson:gson:2.8.1'
+    api group: 'commons-io', name: 'commons-io', version: '2.4'
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+    api group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
+
+    api 'com.blankj:utilcode:1.16.1'
+    api 'com.google.code.gson:gson:2.8.1'
 
     //====================================================
     // rxjava2 && retrofit2  用于网络请求与响应式编程
-    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    api 'io.reactivex.rxjava2:rxandroid:2.0.1'
     // Because RxAndroid releases are few and far between, it is recommended you also
     // explicitly depend on RxJava's latest version for bug fixes and new features.
-    compile 'io.reactivex.rxjava2:rxjava:2.1.7'
-    compile 'com.squareup.retrofit2:retrofit:2.3.0'
-    compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
-    compile 'com.squareup.retrofit2:converter-scalars:2.3.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+    api 'io.reactivex.rxjava2:rxjava:2.1.7'
+    api 'com.squareup.retrofit2:retrofit:2.3.0'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    api 'com.squareup.retrofit2:converter-scalars:2.3.0'
+    api 'com.squareup.retrofit2:converter-gson:2.3.0'
+    api 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
     // 官方修复了android平台下的bug此处恢复依赖，原有不动
     // https://mvnrepository.com/artifact/org.jooq/joor
-    compile group: 'org.jooq', name: 'joor-java-6', version: '0.9.8'
-    compile 'com.orhanobut:logger:2.1.1'
+    api group: 'org.jooq', name: 'joor-java-6', version: '0.9.8'
+    api 'com.orhanobut:logger:2.1.1'
 
     //okhttp3
     api 'com.squareup.okhttp3:okhttp:3.10.0'
     api 'com.squareup.okio:okio:1.14.0'
+
+    //AndroidProcesses 一个获取安卓当前所有进程的库
+    //仅仅支持5.x，如果5.x的平台请将这个库排除
+    api 'com.jaredrummler:android-processes:1.1.1'
 ```
 只需要引用一个我们的库，上面那些常用依赖库就会被全部引用。
 
@@ -101,6 +115,7 @@ QQ：358778849
 [7]: https://github.com/Blankj/AndroidUtilCode
 [8]: https://github.com/orhanobut/logger
 [9]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/HttpUrlUtil.java
+[10]: https://github.com/jaredrummler/AndroidProcesses
 
 [1001]: https://github.com/jOOQ/jOOR
 [1002]: https://github.com/hl85/openq-blog/blob/75e5a267323e5c84188b2a3199799dab995d43de/posts/joor-source-code-analysis.md
