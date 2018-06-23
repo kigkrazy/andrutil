@@ -103,9 +103,13 @@ gradlew uploadArchives
 [litesuits/android-common](https://github.com/litesuits/android-common)  
 感谢以上作者提供的代码(如果引用代码有争议请联系本人)。
 
+# [更新日志](UPDATE_LOG.md)
+
+
 # 作者联系方式
 邮箱：KigKrazy@163.com  
 QQ：358778849
+
 
 [1]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/GsonUtils.java
 [2]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/LogUtils.java
