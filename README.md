@@ -88,6 +88,9 @@ compile 'com.reizx:andrutil:1.7.3' {
     //AndroidProcesses 一个获取安卓当前所有进程的库
     //仅仅支持5.x，如果5.x的平台请将这个库排除
     api 'com.jaredrummler:android-processes:1.1.1'
+    
+    //android的java层hook框架
+    api 'me.weishu:epic:0.3.6'
 ```
 只需要引用一个我们的库，上面那些常用依赖库就会被全部引用。
 
