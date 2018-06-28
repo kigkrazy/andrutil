@@ -70,7 +70,7 @@ dependencies {
     // 官方修复了android平台下的bug此处恢复依赖，原有不动
     // https://mvnrepository.com/artifact/org.jooq/joor
     api group: 'org.jooq', name: 'joor-java-6', version: '0.9.8'
-    api 'com.orhanobut:logger:2.1.1'
+    api 'com.orhanobut:logger:2.2.0'
 
     //okhttp3
     api 'com.squareup.okhttp3:okhttp:3.10.0'
@@ -79,6 +79,9 @@ dependencies {
     //AndroidProcesses 一个获取安卓当前所有进程的库
     //仅仅支持5.x，如果5.x的平台请将这个库排除
     api 'com.jaredrummler:android-processes:1.1.1'
+
+    //android的java层hook框架
+    api 'me.weishu:epic:0.3.6'
 }
 apply plugin: 'maven'
 

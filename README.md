@@ -27,6 +27,9 @@ compile 'com.reizx:andrutil:1.7.3' {
     //例如：
     //  exclude group: 'com.android.support'
     //  exclude module: 'common-io'
+    
+    //通常我们不需要epic框架，此处可以默认去掉，避免引入过多的包
+    exclude module: 'epic'
 }
 ```
 
