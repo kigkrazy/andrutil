@@ -51,6 +51,7 @@ compile 'com.reizx:andrutil:1.7.3' {
 |:-----:|:-----:|
 |[android-common][1003]|一个轻量级的安卓工具包，包含各种加密解密，以及常用字符串文件夹处理类|
 |[AndroidUtilCode][1004]|一个比较完整的安卓通用代码库[【说明】][1005]|
+|[Andromeda][1006]|爱奇艺的一个跨进程交互库（不能跨APP）|
 
 # 目前本库依赖以下常用库,
 ```
@@ -129,4 +130,5 @@ QQ：358778849
 [1003]: https://github.com/litesuits/android-common
 [1004]: https://github.com/Blankj/AndroidUtilCode
 [1005]: https://github.com/Blankj/AndroidUtilCode/blob/master/utilcode/README-CN.md
+[1006]: https://github.com/iqiyi/Andromeda
 
