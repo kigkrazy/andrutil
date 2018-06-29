@@ -22,7 +22,7 @@ allprojects {
 
 在需要引入的库添加如下引用
 ```
-compile 'com.reizx:andrutil:1.7.3' {
+compile 'com.reizx:andrutil:1.7.5' {
     //todo 此处可以排除不想依赖的包
     //例如：
     //  exclude group: 'com.android.support'
@@ -114,7 +114,7 @@ gradlew uploadArchives
 
 
 # 作者联系方式
-邮箱：KigKrazy@163.com  
+邮箱：kigkrazy@163.com  
 QQ：358778849
 
 
