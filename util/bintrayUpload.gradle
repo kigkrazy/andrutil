@@ -5,8 +5,8 @@
  * 3. 执行"gradlew bintrayUpload " 开始上传lib包
 #=======================================================================
 #=======================project=======================
-# 项目名称，通常与你模块的名称一致
-project.name=andrutil
+# 项目名称，通常与你模块的名称一致。不能与project.artifactId名称一致
+project.name=andrutil-lib
 # 项目组ID，通常情况下如果你的包名为 com.example.test，那么项目组 ID 就是 com.example
 project.groupId=com.reizx
 # 项目ID，通常情况下如果你的包名为 com.example.test，那么项目 ID 就是 test
