@@ -1,6 +1,5 @@
 *.iml
 .gradle
-/local.properties
 /.idea/workspace.xml
 /.idea/libraries
 .DS_Store
@@ -9,3 +8,8 @@
 .externalNativeBuild
 /.idea
 /pubrepo
+
+//删除一些本地配置
+/local.properties
+util/local.properties
+/project.properties
