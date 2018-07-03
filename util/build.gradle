@@ -85,4 +85,4 @@ dependencies {
 }
 
 // 使得上传jcenter的工具配置
-apply from: "../bintrayUpload.gradle"
+apply from: "bintrayUpload.gradle"

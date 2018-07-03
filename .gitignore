@@ -13,3 +13,5 @@
 /local.properties
 util/local.properties
 /project.properties
+util/project.properties
+util/release.properties
