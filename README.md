@@ -3,25 +3,7 @@
 每个类都会在开头提供用例。
 
 # 使用
-1. 添加远程仓库
-
-在项目根目录的`build.gradle`添加仓库
-```
-allprojects {
-    repositories {
-        google()
-        jcenter()
-        //add Maven Repository
-        maven {
-            url "https://raw.githubusercontent.com/kigkrazy/reizx-repo/master"
-        }
-    }
-} 
-```
-2. 添加引用
-
 **建议排除一些不用的库，避免引入过多**：
-
 ```
     api('com.reizx:andrutil:1.7.5'){
         //retrofit2 相关
@@ -39,8 +21,6 @@ allprojects {
 ```
 
 # Documentation
-[中文文档]()
-
 | 类 | 介绍 | 
 |:-----:|:-----:|
 |[Blankj/AndroidUtilCode][7]|大量引用该类|
@@ -54,12 +34,13 @@ allprojects {
 |[AndroidProcesses][10]|一个获取当前系统所有进程的库（不支持5.x以上）|
 |[epic][11]|Epic是一个在虚拟机层面、以Java Method为粒度的 运行时 AOP Hook框架。|
 
-# 其他常用工具库
+# 强烈推荐的库
 | 库 | 介绍 | 
 |:-----:|:-----:|
 |[android-common][1003]|一个轻量级的安卓工具包，包含各种加密解密，以及常用字符串文件夹处理类|
 |[AndroidUtilCode][1004]|一个比较完整的安卓通用代码库[【说明】][1005]|
 |[Andromeda][1006]|爱奇艺的一个跨进程交互库（不能跨APP）|
+|[butterknife][1007]|ui绑定库|
 
 # 目前本库依赖以下常用库,
 ```
@@ -143,4 +124,5 @@ QQ：358778849
 [1004]: https://github.com/Blankj/AndroidUtilCode
 [1005]: https://github.com/Blankj/AndroidUtilCode/blob/master/utilcode/README-CN.md
 [1006]: https://github.com/iqiyi/Andromeda
+[1007]: https://github.com/JakeWharton/butterknife
 
