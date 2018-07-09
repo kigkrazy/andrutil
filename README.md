@@ -17,6 +17,10 @@
         exclude group: 'me.weishu:epic'
         //一个通过扫描"/proc"文件夹获取安卓所有进程的库（5.x之后停用）
         exclude group: 'com.jaredrummler'
+        
+        //okhttputils是一个安卓上方便HTTP请求的工具类，作为retrofit的一个应用场景补充。
+        //一般retrofit不好解决的场景，我们才引入它，所以我们一般将它排除。
+        exclude module: 'okhttputils'
     }
 ```
 
@@ -34,6 +38,7 @@
 |[AndroidProcesses][10]|一个获取当前系统所有进程的库（不支持5.x以上）|
 |[epic][11]|Epic是一个在虚拟机层面、以Java Method为粒度的 运行时 AOP Hook框架。|
 |[EasySP][12]|EasySP是一个简单的Android SharedPreferences工具类。|
+|[okhttputils][13]|okhttputils是一个安卓上方便HTTP请求的工具类，作为retrofit的一个应用场景补充。|
 
 # 强烈推荐的库
 | 库 | 介绍 | 
@@ -84,6 +89,9 @@
     
     //EasySP是一个简单的Android SharedPreferences工具类。
     api 'com.white:easysp:1.0.0'
+    
+    //okhttputils是一个安卓上方便HTTP请求的工具类
+    api 'com.reizx:okhttputils:2.6.3'    
 ```
 只需要引用一个我们的库，上面那些常用依赖库就会被全部引用。
 
@@ -122,6 +130,7 @@ QQ：358778849
 [10]: https://github.com/jaredrummler/AndroidProcesses
 [11]: https://github.com/tiann/epic
 [12]: https://github.com/WhiteDG/EasySP
+[13]: https://github.com/kigkrazy/okhttputils
 
 [1001]: https://github.com/jOOQ/jOOR
 [1002]: https://github.com/hl85/openq-blog/blob/75e5a267323e5c84188b2a3199799dab995d43de/posts/joor-source-code-analysis.md

@@ -85,6 +85,9 @@ dependencies {
 
     //EasySP是一个简单的Android SharedPreferences工具类。
     api 'com.white:easysp:1.0.0'
+
+    //okhttputils是一个安卓上方便HTTP请求的工具类
+    api 'com.reizx:okhttputils:2.6.3'
 }
 
 // 上传jcenter的工具配置
