@@ -82,6 +82,9 @@ dependencies {
 
     //android的java层hook框架
     api 'me.weishu:epic:0.3.6'
+
+    //EasySP是一个简单的Android SharedPreferences工具类。
+    api 'com.white:easysp:1.0.0'
 }
 
 // 上传jcenter的工具配置

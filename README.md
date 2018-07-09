@@ -23,7 +23,7 @@
 # Documentation
 | 类 | 介绍 | 
 |:-----:|:-----:|
-|[Blankj/AndroidUtilCode][7]|大量引用该类|
+|[Blankj/AndroidUtilCode][7]|一个安卓常用工具类的集合|
 |[joor][1001]|非常实用简洁的JAVA反射调用类[【参考】][1002]|
 |[logger][8]|android优秀的日志类|
 |[GsonUtil][1]|对象字符串互转类|
@@ -33,6 +33,7 @@
 |[HttpUrlUtil][9]|HttpUrl的解析|
 |[AndroidProcesses][10]|一个获取当前系统所有进程的库（不支持5.x以上）|
 |[epic][11]|Epic是一个在虚拟机层面、以Java Method为粒度的 运行时 AOP Hook框架。|
+|[EasySP][12]|EasySP是一个简单的Android SharedPreferences工具类。|
 
 # 强烈推荐的库
 | 库 | 介绍 | 
@@ -80,6 +81,9 @@
     
     //android的java层hook框架
     api 'me.weishu:epic:0.3.6'
+    
+    //EasySP是一个简单的Android SharedPreferences工具类。
+    api 'com.white:easysp:1.0.0'
 ```
 只需要引用一个我们的库，上面那些常用依赖库就会被全部引用。
 
@@ -116,7 +120,8 @@ QQ：358778849
 [8]: https://github.com/orhanobut/logger
 [9]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/HttpUrlUtil.java
 [10]: https://github.com/jaredrummler/AndroidProcesses
-[10]: https://github.com/tiann/epic
+[11]: https://github.com/tiann/epic
+[12]: https://github.com/WhiteDG/EasySP
 
 [1001]: https://github.com/jOOQ/jOOR
 [1002]: https://github.com/hl85/openq-blog/blob/75e5a267323e5c84188b2a3199799dab995d43de/posts/joor-source-code-analysis.md
