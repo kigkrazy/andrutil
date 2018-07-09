@@ -7,7 +7,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 27
         versionCode 1
-        versionName "1.7.5"
+        versionName "1.7.6"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -82,7 +82,25 @@ dependencies {
 
     //android的java层hook框架
     api 'me.weishu:epic:0.3.6'
+
+    //EasySP是一个简单的Android SharedPreferences工具类。
+    api 'com.white:easysp:1.0.0'
+
+    //okhttputils是一个安卓上方便HTTP请求的工具类
+    api 'com.reizx:okhttputils:2.6.3'
 }
 
-// 使得上传jcenter的工具配置
-apply from: "bintrayUpload.gradle"
+// 上传jcenter的工具配置
+apply plugin: 'com.novoda.bintray-release'
+
+// 发布请执行：
+// gradlew clean build bintrayUpload -PbintrayUser=kigkrazy -PbintrayKey=${APIKey} -PdryRun=false
+publish {
+    repoName = 'reizxutils'
+    artifactId = 'andrutil'
+    groupId = 'com.reizx'
+    userOrg = 'kigkrazy'//bintray用户名
+    publishVersion = android.defaultConfig.versionName
+    website = 'https://github.com/kigkrazy/andrutil'
+    desc = 'an android common utils collection'//描述，不重要
+}
