@@ -41,8 +41,7 @@ compile 'com.reizx:andrutil:1.7.5' {
 |[logger][8]|android优秀的日志类|
 |[GsonUtil][1]|对象字符串互转类|
 |[LogUtil][2]|日志打印类|
-|[StringUtil][4]|一些常用的字符串操作类|
-|[AssetsUtil][6]|assets资源操作|
+|[StringUtil][4]|一些常用的字符串操作类,对`common-io`的补充|
 |[HttpUrlUtil][9]|HttpUrl的解析|
 |[AndroidProcesses][10]|一个获取当前系统所有进程的库（仅支持5.x以上）|
 
@@ -118,11 +117,10 @@ gradlew uploadArchives
 QQ：358778849
 
 
-[1]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/GsonUtils.java
-[2]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/LogUtils.java
-[4]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/StringUtils.java
+[1]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/GsonUtil.java
+[2]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/LogUtil.java
+[4]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/StringUtil.java
 [5]: https://github.com/kigkrazy/andrutil/blob/master/doc/README.md
-[6]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/AssetsUtil.java
 [7]: https://github.com/Blankj/AndroidUtilCode
 [8]: https://github.com/orhanobut/logger
 [9]: https://github.com/kigkrazy/andrutil/blob/master/util/src/main/java/com/reizx/andrutil/HttpUrlUtil.java
