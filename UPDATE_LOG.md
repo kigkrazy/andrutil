@@ -1,6 +1,9 @@
 # 2018-7-25 15:19:00
 * 引入`logback`日志框架
 * 重新设计日志框架
+* 发布1.7.7版本
+* 基于`logback`的日志类封装完成
+
 
 # 2018年7月9日10:02:29
 * 添加`EasySP`库的引用。EasySP是一个简单的Android SharedPreferences工具类。
