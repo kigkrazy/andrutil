@@ -3,9 +3,9 @@ package com.reizx.util.view.fragment;
 import android.annotation.SuppressLint;
 import android.widget.TextView;
 
-import com.blankj.utilcode.util.AppUtils;
-import com.blankj.utilcode.util.ShellUtils;
 import com.qmuiteam.qmui.widget.QMUITopBar;
+import com.reizx.andrutil.log.LogcatAppenderBuilder;
+import com.reizx.andrutil.log.LoggerConfigeration;
 import com.reizx.util.R;
 import com.reizx.util.contract.SettingContract;
 import com.reizx.util.presenter.SettingPresenter;
@@ -17,11 +17,12 @@ import com.reizx.util.view.common.BaseFragment;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import ch.qos.logback.classic.LoggerContext;
+import ch.qos.logback.classic.android.LogcatAppender;
 import io.reactivex.Flowable;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
@@ -63,7 +64,18 @@ public class SettingFragment extends BaseFragment<SettingPresenter> implements S
 
     @OnClick(R.id.btn_setting_page_logback)
     public void logback(){
-        Logger logger = LoggerFactory.getLogger(MainActivity.class);
+        try {
+            LogcatAppender logcatAppender = LogcatAppenderBuilder
+                    .newBuilder()
+                    .name("asf")
+                    .build();
+
+            LoggerConfigeration.newConfigeration().addAppend(logcatAppender).config();
+        } catch (Exception e) {
+            //e.printStackTrace();
+        }
+
+        Logger logger = LoggerFactory.getLogger("asf");
 
         /*以下日志只会在控制台输出*/
         logger.trace("angcyo-->{}", "trace");
@@ -72,13 +84,13 @@ public class SettingFragment extends BaseFragment<SettingPresenter> implements S
         logger.warn("angcyo-->{}", "warn");
         logger.error("angcyo-->{}", "error");
 
-        Logger logtest = LoggerFactory.getLogger("baseLog");
-        /*以下日志会在BASE_ROLL_FILE声明的文件中输出,并且也会在控制台输出*/
-        logtest.trace("logtest-->{}", "trace");
-        logtest.debug("logtest-->{}", "debug");
-        logtest.info("logtest-->{}", "info");
-        logtest.warn("logtest-->{}", "warn");
-        logtest.error("logtest-->{}", "error");
+//        Logger logtest = LoggerFactory.getLogger("baseLog");
+//        /*以下日志会在BASE_ROLL_FILE声明的文件中输出,并且也会在控制台输出*/
+//        logtest.trace("logtest-->{}", "trace");
+//        logtest.debug("logtest-->{}", "debug");
+//        logtest.info("logtest-->{}", "info");
+//        logtest.warn("logtest-->{}", "warn");
+//        logtest.error("logtest-->{}", "error");
     }
 
     @Override

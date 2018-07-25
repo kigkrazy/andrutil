@@ -1,0 +1,82 @@
+package com.reizx.andrutil.log;
+
+
+import android.util.Log;
+
+import org.slf4j.LoggerFactory;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import ch.qos.logback.classic.Level;
+import ch.qos.logback.classic.Logger;
+import ch.qos.logback.classic.android.LogcatAppender;
+import ch.qos.logback.core.FileAppender;
+
+/**
+ * 使用方法
+ *
+ * 基于logback框架的一个封装
+ */
+public class LoggerConfigeration {
+    private static LoggerConfigeration loggerConfigeration;
+    Logger root;
+    Level lv;
+    List<FileAppender> fileAppenders = new ArrayList<>();
+    List<LogcatAppender> logcatAppenders = new ArrayList<>();
+
+    public static boolean isConfig = false;//是否已经构建过了
+
+    private LoggerConfigeration() throws Exception {
+        if (isConfig)
+            throw new Exception("you have already config the logback.");
+        root = (ch.qos.logback.classic.Logger) LoggerFactory.getLogger(Logger.ROOT_LOGGER_NAME);
+        lv = Level.TRACE;
+    }
+
+    public static LoggerConfigeration newConfigeration() throws Exception {
+        if (loggerConfigeration == null) {
+            loggerConfigeration = new LoggerConfigeration();
+        }
+        return loggerConfigeration;
+    }
+
+    public LoggerConfigeration level(Level lv) {
+        this.lv = lv;
+        return this;
+    }
+
+    public LoggerConfigeration addAppend(LogcatAppender appender) {
+        logcatAppenders.add(appender);
+        return this;
+    }
+
+    public LoggerConfigeration addAppend(FileAppender appender) {
+        fileAppenders.add(appender);
+        return this;
+    }
+
+    /**
+     * 这个函数只能调用一次
+     */
+    public void config() {
+        if (isConfig){
+            Log.d(LoggerConfigeration.class.getName(), "you has already build logger config.");
+            return;
+        }
+
+        root.setLevel(Level.TRACE);
+        for (FileAppender appender : fileAppenders){
+            root.addAppender(appender);
+        }
+
+        for (LogcatAppender appender : logcatAppenders){
+            root.addAppender(appender);
+        }
+        isConfig = true;
+    }
+
+    public org.slf4j.Logger getLogger(String name) {
+        return LoggerFactory.getLogger(name);
+    }
+}
