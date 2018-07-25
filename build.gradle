@@ -24,9 +24,18 @@ allprojects {
         google()
         jcenter()
     }
+
     tasks.withType(Javadoc) {
         options.addStringOption('Xdoclint:none', '-quiet')
         options.addStringOption('encoding', 'UTF-8')
+    }
+
+    ext {
+        buildToolsVersion = "26.0.2"
+        minSdkVersion = 14
+        targetSdkVersion = 26
+        compileSdkVersion = 26
+        supportVersion = "27.1.1"
     }
 }
 

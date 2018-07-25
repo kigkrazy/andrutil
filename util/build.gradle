@@ -88,6 +88,10 @@ dependencies {
 
     //okhttputils是一个安卓上方便HTTP请求的工具类
     api 'com.reizx:okhttputils:2.6.3'
+
+    //logback 工具类
+    api 'org.slf4j:slf4j-api:1.7.25'
+    api 'com.github.tony19:logback-android:1.1.1-12'
 }
 
 // 上传jcenter的工具配置
