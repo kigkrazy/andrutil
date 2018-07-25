@@ -13,7 +13,6 @@ import ch.qos.logback.core.rolling.TimeBasedRollingPolicy;
 
 public class RollingFileAppenderBuilder {
     private LoggerContext logContext;//日志Context
-    private String logDir;
 
     private String logPattern;//模式
     private String filePattern;//模式
@@ -25,24 +24,17 @@ public class RollingFileAppenderBuilder {
     @SuppressLint({"DefaultLocale", "SdCardPath"})
     public RollingFileAppenderBuilder() {
         logContext = (LoggerContext) LoggerFactory.getILoggerFactory();
-        logDir = "/sdcard/andrutil";
         logPattern = "%-5relative [%thread][%file:%M:%line] - %msg%n";
-        filePattern = String.format("%s/andrutil/andrutil.%d{yyyy-MM-dd}.log", logDir);
+        filePattern = "/sdcard/andrutil/andrutil.%d{yyyy-MM-dd}.log";
         name = "andrutil";
         append = true;
         history = 5;
-        maxFileSize = "10M";
+        maxFileSize = "10MB";
     }
 
     public static RollingFileAppenderBuilder newBuilder() {
         return new RollingFileAppenderBuilder();
     }
-
-    public RollingFileAppenderBuilder logDir(String logDir) {
-        this.logDir = logDir;
-        return this;
-    }
-
 
     public RollingFileAppenderBuilder logPattern(String pattern) {
         this.logPattern = pattern;

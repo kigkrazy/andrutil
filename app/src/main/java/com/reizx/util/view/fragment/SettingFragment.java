@@ -1,11 +1,13 @@
 package com.reizx.util.view.fragment;
 
 import android.annotation.SuppressLint;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.qmuiteam.qmui.widget.QMUITopBar;
 import com.reizx.andrutil.log.LogcatAppenderBuilder;
 import com.reizx.andrutil.log.LoggerConfigeration;
+import com.reizx.andrutil.log.RollingFileAppenderBuilder;
 import com.reizx.util.R;
 import com.reizx.util.contract.SettingContract;
 import com.reizx.util.presenter.SettingPresenter;
@@ -23,6 +25,7 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import ch.qos.logback.classic.LoggerContext;
 import ch.qos.logback.classic.android.LogcatAppender;
+import ch.qos.logback.core.FileAppender;
 import io.reactivex.Flowable;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
@@ -70,12 +73,22 @@ public class SettingFragment extends BaseFragment<SettingPresenter> implements S
                     .name("asf")
                     .build();
 
-            LoggerConfigeration.newConfigeration().addAppend(logcatAppender).config();
+            //写入文件
+            FileAppender fileAppender = RollingFileAppenderBuilder
+                    .newBuilder()
+                    .name("axff")
+                    .build();
+
+            LoggerConfigeration.newConfigeration()
+                    .addAppend(logcatAppender)
+                    .addAppend(fileAppender)
+                    .config();
         } catch (Exception e) {
-            //e.printStackTrace();
+            Log.d("xx", "xxxx");
+            e.printStackTrace();
         }
 
-        Logger logger = LoggerFactory.getLogger("asf");
+        Logger logger = LoggerFactory.getLogger("axff");
 
         /*以下日志只会在控制台输出*/
         logger.trace("angcyo-->{}", "trace");
