@@ -121,7 +121,6 @@
 -dontwarn javax.annotation.concurrent.GuardedBy
 ## javax
 
-
 ## xposed
 -dontwarn de.robv.**
 # 修改为自己的包名
@@ -141,6 +140,13 @@
 }
 ## xposed
 
+## logback
+-keep class ch.qos.** { *; }
+-dontwarn ch.qos.**
+-keep class org.slf4j.** { *; }
+-dontwarn org.slf4j.**
+-keepattributes *Annotation*
+## logback
 
 ## logger
 -keep class com.orhanobut.logger.**
