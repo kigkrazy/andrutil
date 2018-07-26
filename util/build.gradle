@@ -108,3 +108,5 @@ publish {
     website = 'https://github.com/kigkrazy/andrutil'
     desc = 'an android common utils collection'//描述，不重要
 }
+
+//解决错误 ： 错误: 编码GBK的不可映射字符
