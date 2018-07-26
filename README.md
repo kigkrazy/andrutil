@@ -38,6 +38,7 @@
 |[epic][11]|Epic是一个在虚拟机层面、以Java Method为粒度的 运行时 AOP Hook框架。|
 |[EasySP][12]|EasySP是一个简单的Android SharedPreferences工具类。|
 |[okhttputils][13]|okhttputils是一个安卓上方便HTTP请求的工具类，作为retrofit的一个应用场景补充。|
+|[LoggerConfigeration][doc/LOG-MODULE.md]|`logback`日志模块的封装，用于打印日志到控制台，或者到文件|
 
 # 强烈推荐的库
 | 库 | 介绍 | 

@@ -68,7 +68,6 @@ public class RollingFileAppenderBuilder {
 
     public RollingFileAppender build() {
         RollingFileAppender<ILoggingEvent> rollingFileAppender = new RollingFileAppender<ILoggingEvent>();
-        rollingFileAppender.setAppend(true);
         rollingFileAppender.setAppend(append);
         rollingFileAppender.setName(name);
 

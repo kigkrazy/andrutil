@@ -9,6 +9,7 @@ import com.reizx.andrutil.log.LogcatAppenderBuilder;
 import com.reizx.andrutil.log.LoggerConfigeration;
 import com.reizx.andrutil.log.RollingFileAppenderBuilder;
 import com.reizx.util.R;
+import com.reizx.util.app.App;
 import com.reizx.util.contract.SettingContract;
 import com.reizx.util.presenter.SettingPresenter;
 import com.reizx.util.util.AsfMgrLog;
@@ -65,31 +66,12 @@ public class SettingFragment extends BaseFragment<SettingPresenter> implements S
                 });
     }
 
+    /**
+     * 使用log打印相关初始化请查看{@link App#initLog()}
+     */
     @OnClick(R.id.btn_setting_page_logback)
     public void logback(){
-        try {
-            LogcatAppender logcatAppender = LogcatAppenderBuilder
-                    .newBuilder()
-                    .name("asf")
-                    .build();
-
-            //写入文件
-            FileAppender fileAppender = RollingFileAppenderBuilder
-                    .newBuilder()
-                    .name("axff")
-                    .build();
-
-            LoggerConfigeration.newConfigeration()
-                    .addAppend(logcatAppender)
-                    .addAppend(fileAppender)
-                    .config();
-        } catch (Exception e) {
-            Log.d("xx", "xxxx");
-            e.printStackTrace();
-        }
-
-        Logger logger = LoggerFactory.getLogger("axff");
-
+        Logger logger = LoggerConfigeration.getLogger("andrutl-tag");
         /*以下日志只会在控制台输出*/
         logger.trace("angcyo-->{}", "trace");
         logger.debug("angcyo-->{}", "debug");

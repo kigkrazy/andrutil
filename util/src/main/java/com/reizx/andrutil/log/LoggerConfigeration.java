@@ -15,6 +15,7 @@ import ch.qos.logback.core.Appender;
 
 /**
  * 使用方法
+ * 可以APP启动的时候进行初始化
  *
  * 基于logback框架的一个封装
  */
@@ -65,5 +66,10 @@ public class LoggerConfigeration {
             root.addAppender(appender);
         }
         isConfig = true;
+    }
+
+
+    public static org.slf4j.Logger getLogger(String name){
+        return LoggerFactory.getLogger(name);
     }
 }
