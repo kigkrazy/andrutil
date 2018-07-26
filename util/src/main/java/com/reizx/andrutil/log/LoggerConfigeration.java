@@ -10,8 +10,8 @@ import java.util.List;
 
 import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.Logger;
-import ch.qos.logback.classic.android.LogcatAppender;
-import ch.qos.logback.core.FileAppender;
+import ch.qos.logback.classic.spi.ILoggingEvent;
+import ch.qos.logback.core.Appender;
 
 /**
  * 使用方法
@@ -22,8 +22,7 @@ public class LoggerConfigeration {
     private static LoggerConfigeration loggerConfigeration;
     Logger root;
     Level lv;
-    List<FileAppender> fileAppenders = new ArrayList<>();
-    List<LogcatAppender> logcatAppenders = new ArrayList<>();
+    List<Appender<ILoggingEvent>> appenders = new ArrayList<>();
 
     public static boolean isConfig = false;//是否已经构建过了
 
@@ -46,13 +45,8 @@ public class LoggerConfigeration {
         return this;
     }
 
-    public LoggerConfigeration addAppend(LogcatAppender appender) {
-        logcatAppenders.add(appender);
-        return this;
-    }
-
-    public LoggerConfigeration addAppend(FileAppender appender) {
-        fileAppenders.add(appender);
+    public LoggerConfigeration addAppend(Appender<ILoggingEvent> newAppender) {
+        appenders.add(newAppender);
         return this;
     }
 
@@ -66,11 +60,8 @@ public class LoggerConfigeration {
         }
 
         root.setLevel(Level.TRACE);
-        for (FileAppender appender : fileAppenders){
-            root.addAppender(appender);
-        }
 
-        for (LogcatAppender appender : logcatAppenders){
+        for (Appender<ILoggingEvent> appender : appenders){
             root.addAppender(appender);
         }
         isConfig = true;
