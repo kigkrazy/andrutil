@@ -66,8 +66,4 @@ public class LoggerConfigeration {
         }
         isConfig = true;
     }
-
-    public org.slf4j.Logger getLogger(String name) {
-        return LoggerFactory.getLogger(name);
-    }
 }

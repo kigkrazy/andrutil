@@ -17,7 +17,7 @@ public class LogcatAppenderBuilder {
     public LogcatAppenderBuilder() {
         logContext = (LoggerContext) LoggerFactory.getILoggerFactory();
         pattern = "%-5relative [%thread][%file:%M:%line] - %msg%n";
-        name = "andrutil";
+        name = "andrutil_logcat";
     }
 
     public static LogcatAppenderBuilder newBuilder() {

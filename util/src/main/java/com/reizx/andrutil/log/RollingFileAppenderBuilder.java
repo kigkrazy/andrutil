@@ -26,7 +26,7 @@ public class RollingFileAppenderBuilder {
         logContext = (LoggerContext) LoggerFactory.getILoggerFactory();
         logPattern = "%-5relative [%thread][%file:%M:%line] - %msg%n";
         filePattern = "/sdcard/andrutil/andrutil.%d{yyyy-MM-dd}.log";
-        name = "andrutil";
+        name = "andrutil_rolling_file";
         append = true;
         history = 5;
         maxFileSize = "10MB";
