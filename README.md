@@ -92,6 +92,10 @@
     
     //okhttputils是一个安卓上方便HTTP请求的工具类
     api 'com.reizx:okhttputils:2.6.3'    
+
+    //logback 工具类
+    api 'org.slf4j:slf4j-api:1.7.25'
+    api 'com.github.tony19:logback-android:1.1.1-12'
 ```
 只需要引用一个我们的库，上面那些常用依赖库就会被全部引用。
 
