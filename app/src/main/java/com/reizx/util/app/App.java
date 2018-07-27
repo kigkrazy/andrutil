@@ -12,6 +12,7 @@ import com.elvishew.xlog.printer.AndroidPrinter;
 import com.elvishew.xlog.printer.Printer;
 import com.elvishew.xlog.printer.file.FilePrinter;
 import com.elvishew.xlog.printer.file.backup.FileSizeBackupStrategy;
+import com.elvishew.xlog.printer.file.backup.NeverBackupStrategy;
 import com.reizx.util.di.component.AppComponent;
 import com.reizx.util.di.component.DaggerAppComponent;
 import com.reizx.util.di.module.AppModule;
@@ -39,13 +40,13 @@ public class App extends Application {
 
     @SuppressLint("SdCardPath")
     public void initLog() {
-        XLog.init(LogLevel.ALL);
+        //XLog.init(LogLevel.ALL);
         Printer androidPrinter = new AndroidPrinter();                          // 通过 android.util.Log 打印日志的打印器
         AsfLog.HistoryDateFileNameGenerator fileNameGenerator = new AsfLog.HistoryDateFileNameGenerator(3, "/sdcard/asf/");
         Printer filePrinter = new FilePrinter                                   // 打印日志到文件的打印器
                 .Builder("/sdcard/asf/")                            // 指定保存日志文件的路径
                 .fileNameGenerator(fileNameGenerator)                           // 指定日志文件名生成器，默认为 ChangelessFileNameGenerator("log")
-                .backupStrategy(new FileSizeBackupStrategy(50))       // 指定日志文件备份策略，默认为 FileSizeBackupStrategy(1024 * 1024)
+                .backupStrategy(new NeverBackupStrategy())                      // 指定日志文件备份策略，默认为 FileSizeBackupStrategy(1024 * 1024)
                 .logFlattener(new DefaultFlattener())                           // 指定日志平铺器，默认为 DefaultFlattener
                 .build();
         AsfLog.Setter.newSetter()
