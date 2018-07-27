@@ -64,6 +64,16 @@ public class SettingFragment extends BaseFragment<SettingPresenter> implements S
         AsfLog.d("asf xlog test=============2");
         AsfLog.d("asf xlog test=============3");
         AsfLog.d("asf xlog test=============4");
+
+        AsfLog.d("asf-tag", "asf xlog test=============1");
+        AsfLog.d("asf-tag", "asf xlog test=============2");
+        AsfLog.d("asf-tag", "asf xlog test=============3");
+        AsfLog.d("asf-tag", "asf xlog test=============4");
+
+        AsfLog.d("asf xlog test=============1 %s", "xxx");
+        AsfLog.d("asf xlog test=============2 %s", "xxx");
+        AsfLog.d("asf xlog test=============3 %s", "xxx");
+        AsfLog.d("asf xlog test=============4 %s", "xxx");
     }
 
     @Override

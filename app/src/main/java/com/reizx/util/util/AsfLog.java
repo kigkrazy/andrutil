@@ -49,26 +49,54 @@ public class AsfLog {
     }
 
 
-    public static void d(@NonNull String message, @Nullable Object... args) {
-        logger.d(message, args);
+    public static void d(@NonNull String message) {
+        logger.d(message);
+    }
+    public static void d(@NonNull String tag, @NonNull String message) {
+        message = "[" + tag + "] : " + message;
+        logger.d(message);
     }
 
 
-    public static void i(@NonNull String message, @Nullable Object... args) {
-        logger.i(message, args);
+    public static void i(@NonNull String message) {
+        logger.i(message);
     }
+
+    public static void i(@NonNull String tag, @NonNull String message) {
+        message = "[" + tag + "] : " + message;
+        logger.i(message);
+    }
+
 
     public static void v(@NonNull String message, @Nullable Object... args) {
         logger.v(message, args);
     }
 
+    public static void v(@NonNull String tag, @NonNull String message) {
+        message = "[" + tag + "] : " + message;
+        logger.v(message);
+    }
+
+
     public static void w(@NonNull String message, @Nullable Object... args) {
         logger.w(message, args);
     }
 
+    public static void w(@NonNull String tag, @NonNull String message) {
+        message = "[" + tag + "] : " + message;
+        logger.w(message);
+    }
+
+
     public static void e(@NonNull String message, @Nullable Object... args) {
         logger.e(message, args);
     }
+
+    public static void e(@NonNull String tag, @NonNull String message) {
+        message = "[" + tag + "] : " + message;
+        logger.e(message);
+    }
+
 
     /**
      * Formats the given json content and print it
