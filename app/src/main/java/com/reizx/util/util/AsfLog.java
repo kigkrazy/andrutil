@@ -24,15 +24,15 @@ import java.util.TimeZone;
  * Printer androidPrinter = new AndroidPrinter();                       // 通过 android.util.Log 打印日志的打印器
  * AsfLog.HistoryDateFileNameGenerator fileNameGenerator = new AsfLog.HistoryDateFileNameGenerator(3, "/sdcard/sdf/");
  * Printer filePrinter = new FilePrinter                                // 打印日志到文件的打印器
- *      .Builder("/sdcard/asf/")                                             // 指定保存日志文件的路径
- *      .fileNameGenerator(fileNameGenerator)                                // 指定日志文件名生成器，默认为 ChangelessFileNameGenerator("log")
- *      .backupStrategy(new FileSizeBackupStrategy(50))                      // 指定日志文件备份策略，默认为 FileSizeBackupStrategy(1024 * 1024)
- *      .logFlattener(new DefaultFlattener())                                // 指定日志平铺器，默认为 DefaultFlattener
- *      .build();
+ * .Builder("/sdcard/asf/")                                             // 指定保存日志文件的路径
+ * .fileNameGenerator(fileNameGenerator)                                // 指定日志文件名生成器，默认为 ChangelessFileNameGenerator("log")
+ * .backupStrategy(new FileSizeBackupStrategy(50))                      // 指定日志文件备份策略，默认为 FileSizeBackupStrategy(1024 * 1024)
+ * .logFlattener(new DefaultFlattener())                                // 指定日志平铺器，默认为 DefaultFlattener
+ * .build();
  * AsfLog.Setter.newSetter()
- *      .tag("asf-log")
- *      .printers(androidPrinter, filePrinter)
- *      .set();
+ * .tag("asf-log")
+ * .printers(androidPrinter, filePrinter)
+ * .set();
  */
 public class AsfLog {
     private static Logger logger;
@@ -134,9 +134,8 @@ public class AsfLog {
         };
 
         /**
-         *
          * @param history 保存历史天数
-         * @param logdir log目录
+         * @param logdir  log目录
          */
         public HistoryDateFileNameGenerator(int history, String logdir) {
             this.logdir = logdir;
@@ -176,11 +175,32 @@ public class AsfLog {
 
             for (File file : files) {
                 String name = file.getName();
-                long span = TimeUtils.getTimeSpan(name, now, sdf, TimeConstants.DAY);
+                if (!isDate(sdf, name)) {
+                    //文件名格式错误，直接删除
+                    FileUtils.deleteFile(file);
+                    continue;
+                }
 
+                long span = TimeUtils.getTimeSpan(name, now, sdf, TimeConstants.DAY);
                 if (span < 3) {
                     FileUtils.deleteFile(file);
                 }
+            }
+        }
+
+        /**
+         * 校验date格式是否正确
+         *
+         * @param sdf
+         * @param date
+         * @return
+         */
+        public boolean isDate(SimpleDateFormat sdf, String date) {
+            try {
+                sdf.parse(date);
+                return true;
+            } catch (Exception e) {
+                return false;
             }
         }
     }
