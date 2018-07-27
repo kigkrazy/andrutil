@@ -67,7 +67,7 @@ public class AsfLog {
     }
 
     public static void e(@NonNull String message, @Nullable Object... args) {
-        logger.e(null, message, args);
+        logger.e(message, args);
     }
 
     /**
