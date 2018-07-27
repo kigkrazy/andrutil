@@ -12,7 +12,7 @@ import android.support.annotation.Nullable;
 
 import com.reizx.util.R;
 import com.reizx.util.constant.Constants;
-import com.reizx.util.util.AsfMgrLog;
+import com.reizx.util.util.AsfLog;
 
 /**
  * Created by kigkrazy on 18-5-10.
@@ -28,7 +28,7 @@ public class ForegroundService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        AsfMgrLog.d(TAG, "--------->onStartCommand: ");
+        AsfLog.d(TAG, "--------->onStartCommand: ");
         //启动前台服务
         setNotification(Constants.FORGROUND_SERVICE_TITILE,
                 Constants.FORGROUND_SERVICE_CONTENT_TEXT,
@@ -70,7 +70,7 @@ public class ForegroundService extends Service {
     public static class NotificationClickReceiver extends BroadcastReceiver {
         @Override
         public void onReceive(Context context, Intent intent) {
-            AsfMgrLog.d(TAG, "NotificationClickReceiver --------->onReceive: stop service");
+            AsfLog.d(TAG, "NotificationClickReceiver --------->onReceive: stop service");
             context.stopService(new Intent(context, ForegroundService.class));
         }
     }
