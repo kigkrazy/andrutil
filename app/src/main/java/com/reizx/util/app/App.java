@@ -5,13 +5,10 @@ import android.app.Application;
 import android.util.Log;
 
 import com.blankj.utilcode.util.Utils;
-import com.elvishew.xlog.LogLevel;
-import com.elvishew.xlog.XLog;
 import com.elvishew.xlog.flattener.DefaultFlattener;
 import com.elvishew.xlog.printer.AndroidPrinter;
 import com.elvishew.xlog.printer.Printer;
 import com.elvishew.xlog.printer.file.FilePrinter;
-import com.elvishew.xlog.printer.file.backup.FileSizeBackupStrategy;
 import com.elvishew.xlog.printer.file.backup.NeverBackupStrategy;
 import com.reizx.util.di.component.AppComponent;
 import com.reizx.util.di.component.DaggerAppComponent;
