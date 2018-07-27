@@ -23,13 +23,13 @@
             android:text="测试"/>
 
         <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
-            android:id="@+id/btn_setting_page_logback"
+            android:id="@+id/btn_setting_page_xlog"
             style="@style/NormalRoundButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="15dp"
-            android:text="logback打印"/>
+            android:text="xlog打印"/>
 
         <TextView
             android:id="@+id/tv_setting_page_show_ip_des"

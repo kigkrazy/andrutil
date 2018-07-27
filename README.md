@@ -29,7 +29,7 @@
 |:-----:|:-----:|
 |[Blankj/AndroidUtilCode][7]|一个安卓常用工具类的集合|
 |[joor][1001]|非常实用简洁的JAVA反射调用类[【参考】][1002]|
-|[logger][8]|android优秀的日志类|
+|[logger][8]|android优秀的日志类，目前建议使用[xLog][1008]|
 |[GsonUtil][1]|对象字符串互转类|
 |[LogUtil][2]|日志打印类|
 |[StringUtil][4]|一些常用的字符串操作类,对`common-io`的补充|
@@ -39,6 +39,7 @@
 |[EasySP][12]|EasySP是一个简单的Android SharedPreferences工具类。|
 |[okhttputils][13]|okhttputils是一个安卓上方便HTTP请求的工具类，作为retrofit的一个应用场景补充。|
 |[LoggerConfigeration][14]|`logback`日志模块的封装，用于打印日志到控制台，或者到文件|
+|[xLog][1008]|`xLog`日志模块，建议使用这个|
 
 # 强烈推荐的库
 | 库 | 介绍 | 
@@ -143,4 +144,5 @@ QQ：358778849
 [1005]: https://github.com/Blankj/AndroidUtilCode/blob/master/utilcode/README-CN.md
 [1006]: https://github.com/iqiyi/Andromeda
 [1007]: https://github.com/JakeWharton/butterknife
+[1008]: https://github.com/elvishew/xLog
 

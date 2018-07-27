@@ -58,8 +58,12 @@ public class SettingFragment extends BaseFragment<SettingPresenter> implements S
     /**
      * 使用log打印相关初始化请查看{@link App#initLog()}
      */
-    @OnClick(R.id.btn_setting_page_logback)
-    public void logback(){
+    @OnClick(R.id.btn_setting_page_xlog)
+    public void xlog(){
+        AsfLog.d("asf xlog test=============1");
+        AsfLog.d("asf xlog test=============2");
+        AsfLog.d("asf xlog test=============3");
+        AsfLog.d("asf xlog test=============4");
     }
 
     @Override
