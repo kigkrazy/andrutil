@@ -38,6 +38,8 @@ public class AsfLog {
     private static Logger logger;
 
     static {
+        XLog.init(LogLevel.ALL);//初始化否则报错
+
         Printer androidPrinter = new AndroidPrinter();
         logger = new Logger.Builder()
                 .nt()
@@ -135,8 +137,6 @@ public class AsfLog {
         }
 
         public void set() {
-            XLog.init(LogLevel.ALL);//初始化否则报错
-
             if (printers == null) {
                 printers = new Printer[]{new AndroidPrinter()};
             }
