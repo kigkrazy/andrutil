@@ -5,7 +5,7 @@
 # 使用
 **建议排除一些不用的库，避免引入过多**：
 ```
-    api('com.reizx:andrutil:1.7.7'){
+    api('com.reizx:andrutil:1.8.3'){
         //retrofit2 相关
         //exclude group: 'com.squareup.retrofit2'
         //rxjava2相关的库
@@ -21,6 +21,12 @@
         //okhttputils是一个安卓上方便HTTP请求的工具类，作为retrofit的一个应用场景补充。
         //一般retrofit不好解决的场景，我们才引入它，所以我们一般将它排除。
         exclude module: 'okhttputils'
+
+        //xlog
+        exclude module: 'xlog'
+    
+        //一个远程IPC库
+        exclude module: 'andlinker'
     }
 ```
 
