@@ -40,6 +40,7 @@
 |[okhttputils][13]|okhttputils是一个安卓上方便HTTP请求的工具类，作为retrofit的一个应用场景补充。|
 |[LoggerConfigeration][14]|`logback`日志模块的封装，用于打印日志到控制台，或者到文件|
 |[xLog][1008]|`xLog`日志模块，建议使用这个|
+|[AndLinker][1009]|`AndLinker`远程IPC模块|
 
 # 强烈推荐的库
 | 库 | 介绍 | 
@@ -94,9 +95,11 @@
     //okhttputils是一个安卓上方便HTTP请求的工具类
     api 'com.reizx:okhttputils:2.6.3'    
 
-    //logback 工具类
-    api 'org.slf4j:slf4j-api:1.7.25'
-    api 'com.github.tony19:logback-android:1.1.1-12'
+    //xlog
+    api 'com.elvishew:xlog:1.4.1'
+
+    //一个远程IPC库
+    api 'com.codezjx.library:andlinker:0.7.1'
 ```
 只需要引用一个我们的库，上面那些常用依赖库就会被全部引用。
 
@@ -145,4 +148,5 @@ QQ：358778849
 [1006]: https://github.com/iqiyi/Andromeda
 [1007]: https://github.com/JakeWharton/butterknife
 [1008]: https://github.com/elvishew/xLog
+[1009]: https://github.com/codezjx/AndLinker
 
