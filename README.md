@@ -55,6 +55,8 @@
 |[AndroidUtilCode][1004]|一个比较完整的安卓通用代码库[【说明】][1005]|
 |[Andromeda][1006]|爱奇艺的一个跨进程交互库（不能跨APP）|
 |[butterknife][1007]|ui绑定库|
+|[awesome-android-ui][1010]|UI库的收集|
+|[android-open-project][1011]|安卓优秀开源库的集合|
 
 # 目前本库依赖以下常用库,
 ```
@@ -155,4 +157,6 @@ QQ：358778849
 [1007]: https://github.com/JakeWharton/butterknife
 [1008]: https://github.com/elvishew/xLog
 [1009]: https://github.com/codezjx/AndLinker
+[1010]: https://github.com/wasabeef/awesome-android-ui
+[1011]: https://github.com/Trinea/android-open-project
 
