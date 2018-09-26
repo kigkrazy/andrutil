@@ -7,7 +7,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 27
         versionCode 1
-        versionName "1.8.3"
+        versionName "1.8.4"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -49,11 +49,11 @@ dependencies {
     //====================================================
     //一些常用工具类
     // https://mvnrepository.com/artifact/commons-io/commons-io
-    api group: 'commons-io', name: 'commons-io', version: '2.5'
+    api group: 'commons-io', name: 'commons-io', version: '2.6'
     // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
-    api group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
+    api group: 'org.apache.commons', name: 'commons-lang3', version: '3.8'
 
-    api 'com.blankj:utilcode:1.19.3'
+    api 'com.blankj:utilcode:1.20.3'
     api 'com.google.code.gson:gson:2.8.5'
 
     //====================================================
