@@ -21,6 +21,7 @@ public class Constants {
 
 
     //===========================前台测试服务===========================
+    public final static String FORGROUND_SERVICE_CHANNEL_ID = "com.reizx.util.service.ForegroundService.CHANNEL";
     public final static String FORGROUND_SERVICE_ACTION = "com.reizx.util.service.ForegroundService";
     public final static String FORGROUND_SERVICE_TITILE = "前台服务";
     public final static String FORGROUND_SERVICE_CONTENT_TEXT = "正在运行...";

@@ -7,7 +7,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 27
         versionCode 1
-        versionName "1.8.8"
+        versionName "1.8.9"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -19,7 +19,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
     /**
      * 在Android.mk中设置APP_ABI是没有效果的需要在添加如下模块，用来设置ABI
      */
