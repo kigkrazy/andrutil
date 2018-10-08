@@ -5,7 +5,7 @@
 # 使用
 **建议排除一些不用的库，避免引入过多**：
 ```
-    api('com.reizx:andrutil:1.8.3'){
+    api('com.reizx:andrutil:1.8.8'){
         //retrofit2 相关
         //exclude group: 'com.squareup.retrofit2'
         //rxjava2相关的库

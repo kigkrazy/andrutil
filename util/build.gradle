@@ -4,10 +4,10 @@ android {
     compileSdkVersion 27
 
     defaultConfig {
-        minSdkVersion 19
+        minSdkVersion 15
         targetSdkVersion 27
         versionCode 1
-        versionName "1.8.4"
+        versionName "1.8.8"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -87,7 +87,7 @@ dependencies {
     api 'com.white:easysp:1.0.0'
 
     //okhttputils是一个安卓上方便HTTP请求的工具类
-    api 'com.reizx:okhttputils:2.6.3'
+    api 'com.reizx:okhttputils:2.6.4'
 
     //xlog
     api 'com.elvishew:xlog:1.4.1'
