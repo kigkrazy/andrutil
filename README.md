@@ -3,31 +3,31 @@
 每个类都会在开头提供用例。
 
 # 使用
-**建议排除一些不用的库，避免引入过多**：
+**建议排除一些不用的库，避免引入过多**：  
 ```
-    api('com.reizx:andrutil:1.8.9'){
-        //retrofit2 相关
-        //exclude group: 'com.squareup.retrofit2'
-        //rxjava2相关的库
-        //exclude group: 'io.reactivex.rxjava2'
-        //okhttp3相关
-        //exclude group: 'com.squareup.okhttp3'
-        //exclude group: 'com.squareup.okio'
-        //一个运行时HOOK库
-        exclude group: 'me.weishu:epic'
-        //一个通过扫描"/proc"文件夹获取安卓所有进程的库（5.x之后停用）
-        exclude group: 'com.jaredrummler'
-        
-        //okhttputils是一个安卓上方便HTTP请求的工具类，作为retrofit的一个应用场景补充。
-        //一般retrofit不好解决的场景，我们才引入它，所以我们一般将它排除。
-        exclude module: 'okhttputils'
-
-        //xlog
-        exclude module: 'xlog'
+api('com.reizx:andrutil:1.9.1'){
+    //retrofit2 相关
+    //exclude group: 'com.squareup.retrofit2'
+    //rxjava2相关的库
+    //exclude group: 'io.reactivex.rxjava2'
+    //okhttp3相关
+    //exclude group: 'com.squareup.okhttp3'
+    //exclude group: 'com.squareup.okio'
+    //一个运行时HOOK库
+    exclude group: 'me.weishu:epic'
+    //一个通过扫描"/proc"文件夹获取安卓所有进程的库（5.x之后停用）
+    exclude group: 'com.jaredrummler'
     
-        //一个远程IPC库
-        exclude module: 'andlinker'
-    }
+    //okhttputils是一个安卓上方便HTTP请求的工具类，作为retrofit的一个应用场景补充。
+    //一般retrofit不好解决的场景，我们才引入它，所以我们一般将它排除。
+    exclude module: 'okhttputils'
+
+    //xlog
+    exclude module: 'xlog'
+
+    //一个远程IPC库
+    exclude module: 'andlinker'
+}
 ```
 
 # Documentation
@@ -58,69 +58,10 @@
 |[awesome-android-ui][1010]|UI库的收集|
 |[android-open-project][1011]|安卓优秀开源库的集合|
 
-# 目前本库依赖以下常用库,
-```
-    //====================================================
-    //一些常用工具类
-    // https://mvnrepository.com/artifact/commons-io/commons-io
-    api group: 'commons-io', name: 'commons-io', version: '2.4'
-    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
-    api group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
-
-    api 'com.blankj:utilcode:1.16.1'
-    api 'com.google.code.gson:gson:2.8.1'
-
-    //====================================================
-    // rxjava2 && retrofit2  用于网络请求与响应式编程
-    api 'io.reactivex.rxjava2:rxandroid:2.0.1'
-    // Because RxAndroid releases are few and far between, it is recommended you also
-    // explicitly depend on RxJava's latest version for bug fixes and new features.
-    api 'io.reactivex.rxjava2:rxjava:2.1.7'
-    api 'com.squareup.retrofit2:retrofit:2.3.0'
-    api 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
-    api 'com.squareup.retrofit2:converter-scalars:2.3.0'
-    api 'com.squareup.retrofit2:converter-gson:2.3.0'
-    api 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
-    // 官方修复了android平台下的bug此处恢复依赖，原有不动
-    // https://mvnrepository.com/artifact/org.jooq/joor
-    api group: 'org.jooq', name: 'joor-java-6', version: '0.9.8'
-    api 'com.orhanobut:logger:2.1.1'
-
-    //okhttp3
-    api 'com.squareup.okhttp3:okhttp:3.10.0'
-    api 'com.squareup.okio:okio:1.14.0'
-
-    //AndroidProcesses 一个获取安卓当前所有进程的库
-    //仅仅支持5.x，如果5.x的平台请将这个库排除
-    api 'com.jaredrummler:android-processes:1.1.1'
-    
-    //android的java层hook框架
-    api 'me.weishu:epic:0.3.6'
-    
-    //EasySP是一个简单的Android SharedPreferences工具类。
-    api 'com.white:easysp:1.0.0'
-    
-    //okhttputils是一个安卓上方便HTTP请求的工具类
-    api 'com.reizx:okhttputils:2.6.3'    
-
-    //xlog
-    api 'com.elvishew:xlog:1.4.1'
-
-    //一个远程IPC库
-    api 'com.codezjx.library:andlinker:0.7.1'
-```
-只需要引用一个我们的库，上面那些常用依赖库就会被全部引用。
-
-# 项目打包
-```
-gradlew uploadArchives
-```
 # 一些个人常用信息收集
 [安卓开发规范](https://github.com/Blankj/AndroidStandardDevelop#5-%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6%E8%A7%84%E8%8C%83)  
 [Android 流行框架查速表](https://www.ctolib.com/cheatsheets-Android-ch.html)
 
-
-执行上面命令会在项目根目录生成`pubrepo`文件夹，并且生成打包好的JAR包，即可以发布的到MAVEN仓库的相关文件。
 # 参考与引用项目
 [jingle1267/android-utils](https://github.com/jingle1267/android-utils)  
 [solary2014/Open-Source-Android](https://github.com/solary2014/Open-Source-Android)  

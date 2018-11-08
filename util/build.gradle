@@ -89,7 +89,7 @@ dependencies {
     api 'com.reizx:okhttputils:2.6.4'
 
     //xlog
-    api 'com.elvishew:xlog:1.4.1'
+    api 'com.elvishew:xlog:1.6.0'
 
     //一个远程IPC库
     api 'com.codezjx.library:andlinker:0.7.1'
