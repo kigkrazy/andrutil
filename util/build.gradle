@@ -7,7 +7,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 27
         versionCode 1
-        versionName "1.8.9"
+        versionName "1.9.1"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -52,7 +52,7 @@ dependencies {
     // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
     api group: 'org.apache.commons', name: 'commons-lang3', version: '3.8'
 
-    api 'com.blankj:utilcode:1.20.3'
+    api 'com.blankj:utilcode:1.21.2'
     api 'com.google.code.gson:gson:2.8.5'
 
     //====================================================
@@ -73,7 +73,7 @@ dependencies {
 
     //okhttp3
     api 'com.squareup.okhttp3:okhttp:3.10.0'
-    api 'com.squareup.okio:okio:1.14.0'
+    api 'com.squareup.okio:okio:1.14.1'
 
     //AndroidProcesses 一个获取安卓当前所有进程的库
     //仅仅支持5.x，如果5.x的平台请将这个库排除
