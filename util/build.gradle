@@ -7,7 +7,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 27
         versionCode 1
-        versionName "1.9.2"
+        versionName "1.9.3"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -52,6 +52,10 @@ dependencies {
     // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
     api group: 'org.apache.commons', name: 'commons-lang3', version: '3.8'
 
+    // hutool库，一些常用库的集成
+    // https://www.hutool.cn/
+    api 'cn.hutool:hutool-all:4.2.1'
+
     api 'com.blankj:utilcode:1.21.2'
     api 'com.google.code.gson:gson:2.8.5'
 
@@ -86,7 +90,7 @@ dependencies {
     api 'com.white:easysp:1.0.0'
 
     //okhttputils是一个安卓上方便HTTP请求的工具类
-    api 'com.reizx:okhttputils:2.6.4'
+    api 'com.reizx:okhttputils:3.0.2'
 
     //xlog
     api 'com.elvishew:xlog:1.6.0'
