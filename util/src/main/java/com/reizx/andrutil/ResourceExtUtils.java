@@ -20,9 +20,8 @@ public class ResourceExtUtils {
      * @param assetsDirPath
      * @param destDirPath
      * @return
-     * @throws IOException
      */
-    public static boolean copyDirFromAssets(final Context context, final String assetsDirPath, final String destDirPath) throws IOException {
+    public static boolean copyDirFromAssets(final Context context, final String assetsDirPath, final String destDirPath) {
         try {
             AssetManager assetManager = context.getAssets();
             List<String> files = Arrays.asList(assetManager.list(assetsDirPath)); //使用这个来判断是否是文件夹
