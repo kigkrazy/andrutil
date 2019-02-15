@@ -3,9 +3,9 @@
 每个类都会在开头提供用例。
 
 # 使用
-**建议排除一些不用的库，避免引入过多**：  
+**建议排除一些不常用的库，避免引入过多，请根据自己需要进行选择。**：  
 ```
-api('com.reizx:andrutil:1.9.3'){
+api('com.reizx:andrutil:1.9.7'){
     //retrofit2 相关
     //exclude group: 'com.squareup.retrofit2'
     //rxjava2相关的库
@@ -27,15 +27,18 @@ api('com.reizx:andrutil:1.9.3'){
 
     //一个远程IPC库
     exclude module: 'andlinker'
+    //图片压缩库
+    exclude module: 'compressor'
+    //html，xml解析库
+    exclude module: 'jsoup'
 }
 ```
 
-# Documentation
+# 相关引用及其文档
 | 类 | 介绍 | 
 |:-----:|:-----:|
 |[Blankj/AndroidUtilCode][7]|一个安卓常用工具类的集合|
 |[joor][1001]|非常实用简洁的JAVA反射调用类[【参考】][1002]|
-|[logger][8]|android优秀的日志类，目前建议使用[xLog][1008]|
 |[GsonUtil][1]|对象字符串互转类|
 |[LogUtil][2]|日志打印类|
 |[StringUtil][4]|一些常用的字符串操作类,对`common-io`的补充|
@@ -44,11 +47,12 @@ api('com.reizx:andrutil:1.9.3'){
 |[epic][11]|Epic是一个在虚拟机层面、以Java Method为粒度的 运行时 AOP Hook框架。|
 |[EasySP][12]|EasySP是一个简单的Android SharedPreferences工具类。|
 |[okhttputils][13]|okhttputils是一个安卓上方便HTTP请求的工具类，作为retrofit的一个应用场景补充。|
-|[LoggerConfigeration][14]|`logback`日志模块的封装，用于打印日志到控制台，或者到文件|
 |[xLog][1008]|`xLog`日志模块，建议使用这个|
 |[AndLinker][1009]|`AndLinker`远程IPC模块|
+|[jsoup][1012]|html,xml解析库。[中文文档][1013]|
+|[Compressor][1014]|图片压缩模块|
 
-# 强烈推荐的库
+# 其他推荐库
 | 库 | 介绍 | 
 |:-----:|:-----:|
 |[android-common][1003]|一个轻量级的安卓工具包，包含各种加密解密，以及常用字符串文件夹处理类|
@@ -58,7 +62,7 @@ api('com.reizx:andrutil:1.9.3'){
 |[awesome-android-ui][1010]|UI库的收集|
 |[android-open-project][1011]|安卓优秀开源库的集合|
 
-# 一些个人常用信息收集
+# 文章推荐
 [安卓开发规范](https://github.com/Blankj/AndroidStandardDevelop#5-%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6%E8%A7%84%E8%8C%83)  
 [Android 流行框架查速表](https://www.ctolib.com/cheatsheets-Android-ch.html)
 
@@ -100,4 +104,7 @@ QQ：358778849
 [1009]: https://github.com/codezjx/AndLinker
 [1010]: https://github.com/wasabeef/awesome-android-ui
 [1011]: https://github.com/Trinea/android-open-project
+[1012]: https://github.com/jhy/jsoup
+[1013]: http://www.open-open.com/jsoup/
+[1014]: https://github.com/zetbaitsu/Compressor
 

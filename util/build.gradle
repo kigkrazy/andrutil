@@ -7,7 +7,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 27
         versionCode 1
-        versionName "1.9.5"
+        versionName "1.9.7"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -99,13 +99,22 @@ dependencies {
     api 'com.white:easysp:1.0.0'
 
     //okhttputils是一个安卓上方便HTTP请求的工具类
-    api 'com.reizx:okhttputils:3.0.2'
+    api 'com.reizx:okhttputils:3.1.3'
 
     //xlog
     api 'com.elvishew:xlog:1.6.0'
 
     //一个远程IPC库
     api 'com.codezjx.library:andlinker:0.7.1'
+
+
+    //图片 压缩库
+    api 'id.zelory:compressor:2.1.0'
+
+    // jsoup HTML parser library @ https://jsoup.org/
+    // 中文文档：http://www.open-open.com/jsoup/
+    // English Document：https://jsoup.org/cookbook/
+    api 'org.jsoup:jsoup:1.11.3'
 }
 
 // 上传jcenter的工具配置
