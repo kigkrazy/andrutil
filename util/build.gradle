@@ -6,8 +6,8 @@ android {
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 27
-        versionCode 1
-        versionName "1.9.7"
+        versionCode 11
+        versionName "1.9.9"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -65,7 +65,7 @@ dependencies {
     // https://www.hutool.cn/
     api 'cn.hutool:hutool-all:4.3.2'
 
-    api 'com.blankj:utilcode:1.22.10'
+    api 'com.blankj:utilcode:1.23.4'
     api 'com.google.code.gson:gson:2.8.5'
 
     //====================================================
